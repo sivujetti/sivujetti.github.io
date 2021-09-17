@@ -1,64 +1,58 @@
 {"0": {
     "doc": "Yleistä",
     "title": "Yleistä",
-    "content": "Sivujetti on itse hostattava nettisivurakentaja ja sisällönhallintajärjestelmä. Sivujetti on kirjoitettu php-ohjelmointikielellä (versio 8) ja se käyttää tiedon tallennukseen joko MySQL/MariaDB-, tai SQLite-tietokantaa. Sivujetti muutamalla lauseella: . | Super-kevyt (yksittäinen sivupyyntö vie noin 2MB muistia, vrt. Wordpress+woocommerce &gt;= 50MB) | True WYSIWYG () | . ",
+    "content": "Sivujetti on itse hostattava nettisivurakentaja ja sisällönhallintajärjestelmä. Sivujetti on kirjoitettu php-ohjelmointikielellä (versio 8) ja se käyttää tiedon tallennukseen joko MySQL/MariaDB-, tai SQLite-tietokantaa. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/about.html",
     "relUrl": "/about.html"
   },"1": {
-    "doc": "Yleistä",
-    "title": "Käyttöliittymä",
-    "content": "Sivujetti eroaa muista sisällönhallintajärjestemistä siinä, että siinä ei ole erillistä admin-puolta vaan lopullinen sivusto sekä hallintapaneeli näkyy samassa paikassa: . ",
-    "url": "https://sivujetti.github.io/dev-docs/fi/about.html#k%C3%A4ytt%C3%B6liittym%C3%A4",
-    "relUrl": "/about.html#käyttöliittymä"
-  },"2": {
     "doc": "Asennus",
     "title": "Asennus",
     "content": "Tässä tutoriaalissa opit luomaan uuden Sivujetti -sivuston lokaalissa ympäristössä. Minulla on: . Macos Windows Linux Tätä tutoriaalia ei ole kirjoitettu windowsille, koska SivujettiSDK on saatavilla vain (pre M1) macos:lle. Mikäli windows-koneellasi on jo olemassa php-devausympäristö, voit yrittää seurata macos- tutoriaalin ohjeita skipaten SDK:hon liityvät stepit. Tätä tutoriaalia ei ole kirjoitettu linuxille, koska SivujettiSDK on saatavilla vain (pre M1) macos:lle. Mikäli linux-koneellasi on jo olemassa php-devausympäristö, voit yrittää seurata macos- tutoriaalin ohjeita skipaten SDK:hon liityvät stepit. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html",
     "relUrl": "/tutorials/hello-world.html"
-  },"3": {
+  },"2": {
     "doc": "Asennus",
     "title": "Sisällysluettelo",
     "content": ". | Step 1. Lataa SivujettiSDK | Step 2. Lataa Sivujetti &amp; luo sivustolle kansio | Step 3. Käynnistä devausserveri | Yhteenveto | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html#sis%C3%A4llysluettelo",
     "relUrl": "/tutorials/hello-world.html#sisällysluettelo"
-  },"4": {
+  },"3": {
     "doc": "Asennus",
     "title": "Step 1. Lataa SivujettiSDK",
-    "content": "Lataa sivujetti-sdk-x.x.x.zip osoitteesta github.com/sivujetti/sivujetti-sdk/releases (kohdasta Assets). Pura sivujetti-sdk-x.x.x.zip haluamaasi kansioon (esim. Dokumentit) koneellesi. SivujettiSDK on zip-paketti, joka sisältää kaiken tarvittavan Sivujetti-sivustojen pyörittämiseen lokaalissa ympäristössä. SDK:n mahdollistaa sen, ettei sinulla tarvitse olla koneellasi asennettuna mitään erityisiä ohjelmia, eikä sinun myöskään tarvitse asentaa tai ladata mitään SDK:ta lukuunottamatta. SDK sisltää _php8-tulkin_ sekä _php-devausserverin_. ",
+    "content": "Lataa sivujetti-sdk-x.x.x.zip osoitteesta github.com/sivujetti/sivujetti-sdk/releases (Assets -osion alta). Pura sivujetti-sdk-x.x.x.zip Dokumentit-kansioon tietokoneellesi. SivujettiSDK on zip-paketti, joka sisältää kaiken tarvittavan Sivujetti-sivustojen pyörittämiseen lokaalissa ympäristössä. SDK:n mahdollistaa sen, ettei sinulla tarvitse olla koneellasi asennettuna mitään erityisiä ohjelmia, eikä sinun myöskään tarvitse asentaa tai ladata mitään SDK:ta lukuunottamatta. SDK sisältää php8-tulkin sekä php-devausserverin. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html#step-1-lataa-sivujettisdk",
     "relUrl": "/tutorials/hello-world.html#step-1-lataa-sivujettisdk"
-  },"5": {
+  },"4": {
     "doc": "Asennus",
     "title": "Step 2. Lataa Sivujetti &amp; luo sivustolle kansio",
-    "content": "Lataa sivujetti-x.x.x.zip osoitteesta github.com/sivujetti/sivujetti/releases (kohdasta Assets). Pura sivujetti-x.x.x.zip Lataukset-kansioon. Luo uudelle sivustolle työkansio (Dokumentit/hello-sivujetti) ja kopio purkamasi kansion sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit /hello-sivujetti /backend /public index.php . Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Asenna oletussisältö komennolla ~/Dokumentit/sivujetti-sdk-x.x.x/php/bin/php ~/Dokumentit/hello-sivujetti/backend/cli.php install-from-dir basic-site. ",
+    "content": "Lataa sivujetti-x.x.x.zip osoitteesta github.com/sivujetti/sivujetti/releases (Assets -osion alta). Pura sivujetti-x.x.x.zip Lataukset-kansioon. Luo uudelle sivustolle työkansio (Dokumentit/hello-sivujetti) ja kopio purkamasi kansion sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit /hello-sivujetti /backend /public index.php . Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Asenna oletussisältö komennolla ~/Dokumentit/sivujetti-sdk-x.x.x/php/bin/php ~/Dokumentit/hello-sivujetti/backend/cli.php install-from-dir basic-site. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html#step-2-lataa-sivujetti--luo-sivustolle-kansio",
     "relUrl": "/tutorials/hello-world.html#step-2-lataa-sivujetti--luo-sivustolle-kansio"
-  },"6": {
+  },"5": {
     "doc": "Asennus",
     "title": "Step 3. Käynnistä devausserveri",
-    "content": "Siirry kansioon johon purit sdk-zipin komennolla cd ~/Documents/sivujetti-sdk-x.x.x/. Käynnistä serveri komennolla php/bin/php -c php/conf/php.ini -S localhost:8080 -t ~/Dokumentit/hello-sivujetti. Avaa selain osoittessa http://localhost:8080/index.php?q=/ (sivusto), http://localhost:8080/index.php?q=/_edit (muokkaustila). ",
+    "content": "Siirry kansioon johon purit sdk-zipin komennolla cd ~/Dokumentit/sivujetti-sdk-x.x.x/. Käynnistä serveri komennolla php/bin/php -S localhost:8080 -t ~/Dokumentit/hello-sivujetti -c php/conf/php.ini. Mikäli macos ei anna ajaa ohjelmaa, klikkaa “Peruuta”, ja avaa php/bin/php-tiedosto manuaalisesti hiiren oikealla napilla. Klikkaa “Avaa”, sulje avautuva terminaali ja suorita edellinen steppi uudestaan. Avaa selain osoittessa http://localhost:8080/index.php?q=/ (sivusto), http://localhost:8080/index.php?q=/_edit (muokkaustila). Kun et enää tarvitse serveriä, voit sammuttaa sen näppäinyhdistelmällä ctrl + c komentoriviohjelmassa, jossa käynnistit sen. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html#step-3-k%C3%A4ynnist%C3%A4-devausserveri",
     "relUrl": "/tutorials/hello-world.html#step-3-käynnistä-devausserveri"
-  },"7": {
+  },"6": {
     "doc": "Asennus",
     "title": "Yhteenveto",
     "content": "Tässä tutoriaalissa: . | Latasit SivujettiSDK:n | Loit uudelle sivustolle projektikansion | Käynnistit devausserverin käyttäen SDK:ta joka pyörittää projektikansion sivustoa | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/hello-world.html#yhteenveto",
     "relUrl": "/tutorials/hello-world.html#yhteenveto"
-  },"8": {
+  },"7": {
     "doc": "Koti",
     "title": "Sivujetti dokumentaatio",
     "content": "Sivujetti on erittäin kevyt, moderni nettisivurakentaja ja sisällönhallintajärjestelmä. Tämän sivusto kertoo kuinka se toimii, ja kuinka sitä käytetään web-devaajan tai designerin näkökulmasta. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/#sivujetti-dokumentaatio",
     "relUrl": "/#sivujetti-dokumentaatio"
-  },"9": {
+  },"8": {
     "doc": "Koti",
     "title": "Koti",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/",
     "relUrl": "/"
-  },"10": {
+  },"9": {
     "doc": "Tutoriaalit",
     "title": "Tutoriaalit",
     "content": "… . ",
