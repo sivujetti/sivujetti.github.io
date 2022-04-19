@@ -8,22 +8,49 @@ function traverseContent(fn) {
 }
 return {
     currentOs: 'macos',
-    alterInstallationTutorialInstructionsFor(os) {
+    currentState: 'single-visible',
+    hideAllExceptFirst(os) {
         if (this.currentOs === os)
             return;
-        if (os === 'windows' || os === 'linux') {
-            traverseContent(el => el.classList.add('d-none'));
-            if (this.currentOs !== 'macos')
-                document.querySelector(`.dynamic-message-${this.currentOs}`).classList.add('d-none');
-            document.querySelector(`.dynamic-message-${os}`).classList.remove('d-none');
-        } else if (os === 'macos') {
+        if (this.currentState === 'all-hidden')
             traverseContent(el => el.classList.remove('d-none'));
-            document.querySelector(`.dynamic-message-windows`).classList.add('d-none');
-            document.querySelector(`.dynamic-message-linux`).classList.add('d-none');
-        } else {
+        traverseContent(el => el.classList.add('d-none'));
+        document.querySelector(`.dynamic-message-${os}`).classList.remove('d-none');
+        this.currentOs = os;
+        this.currentState = 'all-hidden';
+    },
+    showInstallationTutorialInstructionsFor(e, os) {
+        if (this.currentOs === os)
+            return;
+        if (os !== 'windows' && os !== 'linux' && os !== 'macos') {
             throw new Error();
         }
+        Array.from(document.querySelectorAll(`.d-none:not([class$=dynamic-message-${os}])`))
+            .forEach(el => el.classList.remove('d-none'));
+        Array.from(document.querySelectorAll(`.dynamic-message-${this.currentOs}`))
+            .forEach(el => el.classList.add('d-none'));
+        e.target.parentElement.querySelector('.btn.selected').classList.remove('selected');
+        e.target.classList.add('selected');
         this.currentOs = os;
+    },
+    interactifyTabs() {
+        Array.from(document.querySelectorAll('.tabs')).forEach(el => {
+            const contentEls = Array.from(el.nextElementSibling.querySelectorAll(':scope div'));
+            const btns = Array.from(el.querySelectorAll(':scope button'));
+            const state = {currentIndex: 0};
+            btns.forEach((btnEl, i) => {
+                btnEl.addEventListener('click', () => {
+                    if (state.currentIndex === i) return;
+                    //
+                    btns[state.currentIndex].classList.remove('current');
+                    contentEls[state.currentIndex].classList.add('d-none');
+                    //
+                    state.currentIndex = i;
+                    btns[state.currentIndex].classList.add('current');
+                    contentEls[state.currentIndex].classList.remove('d-none');
+                });
+            });
+        });
     }
 };
 }());

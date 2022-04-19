@@ -1558,4 +1558,14 @@ p.message-box.error { border-left-color: #e94c4c; }
 
 p.message-box.error:before { background-color: rgba(233, 76, 76, 0.05); }
 
-/*# sourceMappingURL=just-the-docs-light.css.map */
+.tabs { margin-top: 2rem; }
+
+.tabs button { border: 1px solid #5e41d0; background-color: transparent; padding: .26rem .8rem; font-family: inherit; font-size: inherit; font-weight: 500; line-height: 1.5; color: #000a47; text-decoration: none; min-width: 5.1rem; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+
+.tabs button:not(:first-of-type) { border-left: none; }
+
+.tabs button.current { border-bottom-color: #fff; }
+
+.tabs-content { border-top: 1px solid #5e41d0; margin-top: -1px; padding-top: .8rem; margin-bottom: 3rem; }
+
+.footnotes { font-size: 14px; margin-top: 1.4rem; color: #5c5962b3; }
