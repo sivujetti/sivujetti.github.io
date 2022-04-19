@@ -14,6 +14,7 @@ return {
             return;
         if (this.currentState === 'all-hidden')
             traverseContent(el => el.classList.remove('d-none'));
+
         traverseContent(el => el.classList.add('d-none'));
         document.querySelector(`.dynamic-message-${os}`).classList.remove('d-none');
         this.currentOs = os;
