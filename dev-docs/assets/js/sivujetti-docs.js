@@ -16,7 +16,7 @@ return {
             traverseContent(el => el.classList.remove('d-none'));
 
         traverseContent(el => el.classList.add('d-none'));
-        document.querySelector(`.dynamic-message-${os}`).classList.remove('d-none');
+        document.querySelector(`.dm-${os}`).classList.remove('d-none');
         this.currentOs = os;
         this.currentState = 'all-hidden';
     },
@@ -26,9 +26,9 @@ return {
         if (os !== 'windows' && os !== 'linux' && os !== 'macos') {
             throw new Error();
         }
-        Array.from(document.querySelectorAll(`.d-none:not([class$=dynamic-message-${os}])`))
-            .forEach(el => el.classList.remove('d-none'));
-        Array.from(document.querySelectorAll(`.dynamic-message-${this.currentOs}`))
+        Array.from(document.querySelectorAll(`.d-none:not([class$=dm-${os}])`))
+            .forEach(el => { if (el.className !== 'd-none') el.classList.remove('d-none'); });
+        Array.from(document.querySelectorAll(`.dm-${this.currentOs}`))
             .forEach(el => el.classList.add('d-none'));
         e.target.parentElement.querySelector('.btn.selected').classList.remove('selected');
         e.target.classList.add('selected');
@@ -52,6 +52,6 @@ return {
                 });
             });
         });
-    }
+    },
 };
 }());
