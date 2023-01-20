@@ -91,7 +91,7 @@
   },"15": {
     "doc": "Asennus lokaalisti Docker-konttiin",
     "title": "Step 1. Lataa sivujetti-docker ja Sivujetti",
-    "content": "sivujetti-docker . Lataa sivujetti-docker-0.1.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.12.0.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
+    "content": "sivujetti-docker . Lataa sivujetti-docker-0.1.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.12.1.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti",
     "relUrl": "/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti"
   },"16": {
@@ -157,7 +157,7 @@
   },"26": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 1. Lataa Sivujetti &amp; luo projektikansio",
-    "content": "Lataa sivujetti-0.12.0.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
+    "content": "Lataa sivujetti-0.12.1.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio",
     "relUrl": "/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio"
   },"27": {
