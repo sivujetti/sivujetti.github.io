@@ -77,63 +77,63 @@
     "url": "https://sivujetti.github.io/dev-docs/fi/",
     "relUrl": "/"
   },"13": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
-    "title": "Asennus lokaalisti Docker-konttiin",
-    "content": "Tässä tutoriaalissa asennat Sivujetti -sivuston Alpine Linux -pohjaiseen Docker-konttiin. Käyttöjärjestelmäni johon Docker Desktop on asennettu on . Macos Windows Linux ",
+    "doc": "Asennus lokaalisti Docker",
+    "title": "Asennus lokaalisti Docker",
+    "content": "Tässä tutoriaalissa asennat Sivujetti -sivuston konttiympäristöön käyttäen Docker( Desktop)ia ja Alpine Linux -pohjaista imagea. Käyttöjärjestelmäni johon Docker Desktop on asennettu on . Macos Windows Linux ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html",
     "relUrl": "/tutorials/installation-docker.html"
   },"14": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 0. Esivalmistelut",
     "content": "Docker Desktop tulisi olla jo asennettuna ja käynnissä koneellasi. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-0-esivalmistelut",
     "relUrl": "/tutorials/installation-docker.html#step-0-esivalmistelut"
   },"15": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 1. Lataa sivujetti-docker ja Sivujetti",
-    "content": "sivujetti-docker . Lataa sivujetti-docker-0.1.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.13.0.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
+    "content": "sivujetti-docker . Lataa sivujetti-docker-0.2.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.14.0.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti",
     "relUrl": "/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti"
   },"16": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 2. Luo image",
-    "content": "Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Siirry kansioon johon purit zipin komennolla cd ~/Dokumentit/sivujetti-docker/. Siirry kansioon johon purit zipin komennolla cd C:\\Users\\me\\Dokumentit\\sivujetti-docker. Luo Docker image ajamalla komento docker build -t sivujetti-docker . ",
+    "content": "Tämä steppi luo koneellesi uuden imagen sivujetti-docker, jolla voit luoda useita kontteja. Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Siirry kansioon johon purit zipin komennolla cd ~/Dokumentit/sivujetti-docker/. Siirry kansioon johon purit zipin komennolla cd C:\\Users\\me\\Dokumentit\\sivujetti-docker. Luo Docker image ajamalla komento docker build -t sivujetti-docker . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-2-luo-image",
     "relUrl": "/tutorials/installation-docker.html#step-2-luo-image"
   },"17": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 3. Luo ja käynnistä kontti",
-    "content": "Vaihtoehto 1: Ilman tiedostojen synkkausta . Tämä komento luo kontin, jonka sisällä tapahtuvat muutokset ei vaikuta 1. stepin lokaaleihin tiedostoihin. Jos haluat muuttaa esim. jotain php-tiedostoa kontin sisällä, se tulee tehdä komentorivin kautta (docker exec). Aja komento docker run -it -d -p 127.0.0.1:3000:8080 sivujetti-docker . Vaihtoehto 2: Synkkauksen kanssa . Tämä komento taas luo kontin, jossa sen sisällä tapahtuvat muutokset synkkautuu 1. stepin lokaalien kansioiden kanssa, ja vice versa. Tällöin voit muokkailla esim. teematiedostoja ilman komentoriviä. Aja komento . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v ~/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v ~/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . Ota ylös komennon printtaaman merkkijonon alku (esim. 5e888fd9627b3e28195c18a9f6f35cb91fd025e398245d968cc8fdcc8e4527ba -&gt; 5e88). ",
+    "content": "Tämä steppi luo uuden kontin, tallentaa sen koneellesi ja käynnistää sen. Jos myöhemmin sammutat Docker Desktopin, ja haluat käynnistää kontin uudelleen, katso Muita ohjeita &gt; Kontin käynnistäminen myöhemmin. Vaihtoehto 1: Ilman tiedostojen synkkausta . Tämä komento luo kontin, jonka sisällä tapahtuvat muutokset ei vaikuta 1. stepin lokaaleihin tiedostoihin. Jos haluat muuttaa esim. jotain php-tiedostoa kontin sisällä, se tulee tehdä komentorivin kautta (docker exec). Aja komento docker run -it -d -p 127.0.0.1:3000:8080 sivujetti-docker . Vaihtoehto 2: Synkkauksen kanssa . Tämä komento taas luo kontin, jossa sen sisällä tapahtuvat muutokset synkkautuu 1. stepin lokaalien kansioiden kanssa, ja vice versa. Tällöin voit muokkailla esim. teematiedostoja ilman komentoriviä. Aja komento . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v ~/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v ~/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . Ota ylös komennon printtaaman merkkijonon alku (esim. 5e888fd9627b3e28195c18a9f6f35cb91fd025e398245d968cc8fdcc8e4527ba -&gt; 5e88). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-3-luo-ja-k%C3%A4ynnist%C3%A4-kontti",
     "relUrl": "/tutorials/installation-docker.html#step-3-luo-ja-käynnistä-kontti"
   },"18": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 4.1.",
-    "content": "Tämä on väliaikainen steppi, ja poistuu kunhan Sivujetillä on “oikea” installeri. Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c 'php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php' . Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c \"php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php\" . Jos edellinen komento ei suostu toimimaan, koita ajaa se ilman viimeisin kohtaa (docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 php /var/www/sivujetti-backend/run-this-once.php) . ",
+    "content": "Tämä on väliaikainen steppi, ja poistuu kunhan Sivujetillä on “oikea” installeri. Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c 'php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php' . Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c \"php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php\" . Jos edellinen komento ei suostu toimimaan, koita ajaa se ilman viimeisintä osaa (docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 php /var/www/sivujetti-backend/run-this-once.php) . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-41",
     "relUrl": "/tutorials/installation-docker.html#step-41"
   },"19": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 4.2.",
     "content": "Asenna tyhjä teema komennolla docker exec -it 5e88 php /var/www/sivujetti-backend/cli.php install-from-dir empty sivujettiuser user@email.com userpass - - - - / . Tässä kohtaaa konttiin pitäisi ilmestyä uusia tiedostoja teemalle, konfiguraatiolle sekä esim. tietokannalle. Jos loit kontin tiedostosynkkauksen kanssa, nämä uudet tiedostot pitäisi nyt näkyä myös lokaaleissa kansioissa (to-htdocs / to-outside-htdocs). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-42",
     "relUrl": "/tutorials/installation-docker.html#step-42"
   },"20": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Step 5. Avaa sivusto",
     "content": "Avaa selain osoittessa http://localhost:3000/index.php?q=/ (sivusto), http://localhost:3000/index.php?q=/jet-login (muokkaustila). Käyttäjätunnus ja salasana samat, kuin edellisessä stepissä (sivujettiuser userpass). Uusi Sivujetti-sivustosi on nyt asennettu kontin sisään. Pidä hauskaa! . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-5-avaa-sivusto",
     "relUrl": "/tutorials/installation-docker.html#step-5-avaa-sivusto"
   },"21": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Yhteenveto",
-    "content": "Tässä tutoriaalissa: . | Latasit sivujetti-dockerin ja sivujetin uusimman version | Loit kontin imagesta | Asensit tyhjän teeman konttiin | Avasit kontissa pyörivän sivuston selaimeen | . ",
+    "content": "Tässä tutoriaalissa: . | Latasit sivujetti-dockerin ja sivujetin uusimman version | Loit imagen sivujetti-docker | Loit uuden kontin em. imagella | Asensit tyhjän teeman konttiin | Avasit kontissa pyörivän sivuston selaimeen | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#yhteenveto",
     "relUrl": "/tutorials/installation-docker.html#yhteenveto"
   },"22": {
-    "doc": "Asennus lokaalisti Docker-konttiin",
+    "doc": "Asennus lokaalisti Docker",
     "title": "Muita ohjeita",
-    "content": "Kaksi ensimmäistä ohjetta on hyödyllisiä silloin, jos loit kontin ilman tiedostojen synkkausta (jolloin ainoa tapa muuttaa tiedostoja kontin sisällä on komentorivin kautta). Tiedostojen muokkaus kontin sisällä . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Aloita muokkaamaan tiedostoa nanolla . | nano /var/www/sivujetti-backend/site/Site.php | tai esim. | nano /var/www/html/config.php | . | Tallenna tiedosto . | Ctrl + x | y/n | . | Poistu kontista . | exit | . | . Tietokannan tarkasteleminen . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Avaa sivuston tietokanta sqlite-repliin . | sqlite3 sivujetti-backend/site/my-site.db | . | Tee jotain . | select title, slug from Pages; | . | Poistu sqlite-replistä . | .q | . | Poistu kontista . | exit | . | . Sivuston exporttaaminen . Jos haluat sivuston, ja sinne tekemäsi muutokset kontista ulos, voit tehdä sen esim. seuraavasti: . | Paketoi sivusto kontin sisällä . | docker exec -it 5e88 tar --create --file sivujetti-backend/exported.tar html sivujetti-backend | . | Kopioi paketti kontin sisältä omalle koneellesi (jos loit kontin ilman synkkausta, muutoin se löytyy to-outside-htdocs kansiosta) . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar ~/Lataukset/my-exported-site.tar | . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar C:\\Users\\me\\Dokumentit\\Lataukset\\my-exported-site.tar | . | (Vapaaehtoinen) Poista paketti kontin sisältä docker exec -it 5e88 rm sivujetti-backend/exported.tar | . Nyt sivusto kokonaisuudessaan löytyy Lataukset kansiosta koneeltasi. Kontin poistaminen . docker stop 5e88 &amp;&amp; docker rm 5e88 . ",
+    "content": "Kolme ensimmäistä ohjetta on hyödyllisiä silloin, jos loit kontin ilman tiedostojen synkkausta (jolloin ainoa tapa muuttaa tiedostoja kontin sisällä on komentorivin kautta). Tiedostojen muokkaus kontin sisällä . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Aloita muokkaamaan tiedostoa nanolla . | nano /var/www/sivujetti-backend/site/Site.php | tai esim. | nano /var/www/html/config.php | . | Tallenna tiedosto . | Ctrl + x | y/n | . | Poistu kontista . | exit | . | . Tietokannan tarkasteleminen . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Avaa sivuston tietokanta sqlite-repliin . | sqlite3 sivujetti-backend/site/my-site.db | . | Tee jotain . | select title, slug from Pages; | . | Poistu sqlite-replistä . | .q | . | Poistu kontista . | exit | . | . Sivuston exporttaaminen . Jos haluat sivuston, ja sinne tekemäsi muutokset kontista ulos, voit tehdä sen esim. seuraavasti: . | Paketoi sivusto kontin sisällä . | docker exec -it 5e88 tar --create --file sivujetti-backend/exported.tar html sivujetti-backend | . | Kopioi paketti kontin sisältä omalle koneellesi (jos loit kontin ilman synkkausta, muutoin se löytyy to-outside-htdocs kansiosta) . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar ~/Lataukset/my-exported-site.tar | . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar C:\\Users\\me\\Dokumentit\\Lataukset\\my-exported-site.tar | . | (Vapaaehtoinen) Poista paketti kontin sisältä docker exec -it 5e88 rm sivujetti-backend/exported.tar | . Nyt sivusto kokonaisuudessaan löytyy Lataukset kansiosta koneeltasi. Kontin käynnistäminen myöhemmin . Kontit sammuu itsekseen, kun Docker Desktop suljetaan. Jos haluat käynnistää luomasi kontin myöhemmin, voit skipata tutoriaalin kaikki stepit ja ajaa suoraan: . docker start 5e88 . Jos et enää muista kontin id:tä, voit etsiä sen docker ps -a tulostamasta listasta. Kontin poistaminen . docker stop 5e88 &amp;&amp; docker rm 5e88 . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#muita-ohjeita",
     "relUrl": "/tutorials/installation-docker.html#muita-ohjeita"
   },"23": {
@@ -157,7 +157,7 @@
   },"26": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 1. Lataa Sivujetti &amp; luo projektikansio",
-    "content": "Lataa sivujetti-0.13.0.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
+    "content": "Lataa sivujetti-0.14.0.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio",
     "relUrl": "/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio"
   },"27": {
