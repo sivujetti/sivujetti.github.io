@@ -229,7 +229,7 @@ hr { height: 1px; padding: 0; margin: 2rem 0; background-color: #eeebee; border:
 
 @media (min-width: 50rem) { .site-title { padding-top: 0.5rem; padding-bottom: 0.5rem; } }
 
-.site-logo { width: 100%; height: 100%; background-image: url("https://sivujetti.github.io/dev-docs/assets/images/sivujetti-logo.png"); background-repeat: no-repeat; background-position: left center; background-size: contain; }
+.site-logo { width: 100%; height: 100%; background-image: url("https://sivujetti.github.io/dev-docs/assets/images/sivujetti-logo.webp"); background-repeat: no-repeat; background-position: left center; background-size: contain; }
 
 .site-button { display: flex; height: 100%; padding: 1rem; align-items: center; }
 
@@ -1583,6 +1583,16 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 @media print { .site-footer, .site-button, #edit-this-page, #back-to-top, .site-nav, .main-header { display: none !important; } .side-bar { width: 100%; height: auto; border-right: 0 !important; } .site-header { border-bottom: 1px solid #eeebee; } .site-title { font-size: 16px !important; font-weight: 700 !important; } .text-small { font-size: 8pt !important; } pre.highlight { border: 1px solid #eeebee; } .main { max-width: none; margin-left: 0; } }
 
+th { text-align: left; }
+
+.footnotes { font-size: 14px; margin-top: 1.4rem; color: #5c5962b3; }
+
+.site-logo { width: 70%; height: 70%; position: relative; }
+
+.site-logo:after { content: "Docs"; color: #959396; position: absolute; left: 80px; bottom: -8px; font-size: .4em; font-weight: 600; text-transform: uppercase; }
+
+@media (min-width: 50rem) { .site-logo { width: 60%; height: 60%; } .site-logo:after { left: 77px; } }
+
 .bg-highlight { background-color: #fff3b5; }
 
 p.message-box { position: relative; padding: 2.1rem 1rem .8rem; border-left: 0.2rem solid #2869e6; box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.05rem rgba(0, 0, 0, 0.1); font-size: .9rem; border-radius: 2px; margin: 1.8rem 0 1rem 0; line-height: 1.6rem; }
@@ -1610,7 +1620,5 @@ p.message-box.error:before { background-color: rgba(233, 76, 76, 0.05); }
 .tabs button.current { border-bottom-color: #fff; }
 
 .tabs-content { border-top: 1px solid #000a47; margin-top: -1px; padding-top: .8rem; margin-bottom: 3rem; }
-
-.footnotes { font-size: 14px; margin-top: 1.4rem; color: #5c5962b3; }
 
 /*# sourceMappingURL=just-the-docs-default.css.map */
