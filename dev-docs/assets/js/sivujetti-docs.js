@@ -9,6 +9,9 @@ function traverseContent(fn) {
 return {
     currentOs: 'macos',
     currentState: 'single-visible',
+    /**
+     * @param {'windows'|'macos'|'linux'|String} os
+     */
     hideAllExceptFirst(os) {
         if (this.currentOs === os)
             return;
@@ -20,6 +23,10 @@ return {
         this.currentOs = os;
         this.currentState = 'all-hidden';
     },
+    /**
+     * @param {Event} e
+     * @param {'windows'|'macos'|'linux'|String} os
+     */
     showInstallationTutorialInstructionsFor(e, os) {
         if (this.currentOs === os)
             return;
@@ -34,6 +41,8 @@ return {
         e.target.classList.add('selected');
         this.currentOs = os;
     },
+    /**
+     */
     interactifyTabs() {
         Array.from(document.querySelectorAll('.tabs')).forEach(el => {
             const contentEls = Array.from(el.nextElementSibling.querySelectorAll(':scope div'));
@@ -53,5 +62,32 @@ return {
             });
         });
     },
+    /**
+     */
+    colorCodeMenusAndHeadings() {
+        // side menu
+        const sideMenuLis = [...document.querySelectorAll('ul.nav-list ul.nav-list li a')];
+        sideMenuLis.forEach(colorCodeTextIn);
+        // breadcrumbs
+        const breadcrumbLis = [...document.querySelectorAll('ol.breadcrumb-nav-list li')];
+        breadcrumbLis.forEach(colorCodeTextIn);
+
+        window.addEventListener('load', () => {
+            // table of contents
+            const tocLis = [...document.querySelectorAll('hr + h2 + ul li')];
+            tocLis.forEach(colorCodeTextIn);
+        });
+    }
 };
+/**
+ * @param {HTMLElement} el
+ */
+function colorCodeTextIn(el) {
+    if (el.textContent.indexOf('(Theme.php)') > -1)
+        el.innerHTML = el.innerHTML.replace('(Theme.php)', '<span class="text-green-200">(Theme.php)</span>');
+    else if (el.textContent.indexOf('(Site.php)') > -1)
+        el.innerHTML = el.innerHTML.replace('(Site.php)', '<span class="text-blue-200">(Site.php)</span>');
+    else if (el.textContent.indexOf('(lisäosat)') > -1)
+        el.innerHTML = el.innerHTML.replace('(lisäosat)', '<span class="text-yellow-300">(lisäosat)</span>');
+}
 }());
