@@ -10,7 +10,7 @@ return {
     currentOs: 'macos',
     currentState: 'single-visible',
     /**
-     * @param {'windows'|'macos'|'linux'|String} os
+     * @param {'windows'|'macos'|'linux'|string} os
      */
     hideAllExceptFirst(os) {
         if (this.currentOs === os)
@@ -25,7 +25,7 @@ return {
     },
     /**
      * @param {Event} e
-     * @param {'windows'|'macos'|'linux'|String} os
+     * @param {'windows'|'macos'|'linux'|string} os
      */
     showInstallationTutorialInstructionsFor(e, os) {
         if (this.currentOs === os)

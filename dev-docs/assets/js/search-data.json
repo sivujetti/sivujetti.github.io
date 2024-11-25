@@ -11,8 +11,8 @@
     "url": "https://sivujetti.github.io/dev-docs/fi/about.html#ominaisuudet",
     "relUrl": "/about.html#ominaisuudet"
   },"2": {
-    "doc": "API",
-    "title": "API",
+    "doc": "Backend-API",
+    "title": "Backend-API",
     "content": "Tämä osio on työn alla. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/api.html",
     "relUrl": "/api/api.html"
@@ -83,618 +83,846 @@
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/change-html-output.html",
     "relUrl": "/tutorials/customize/change-html-output.html"
   },"14": {
-    "doc": "Luo lisäosa (lisäosat)",
-    "title": "Luo lisäosa",
-    "content": "… . ",
-    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-simple-plugin.html#luo-lis%C3%A4osa",
-    "relUrl": "/tutorials/customize/create-simple-plugin.html#luo-lisäosa"
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Luo lisäosa - osa 1",
+    "content": "Tässä tutoriaalissa luomme lisäosan, jolla voi lisätä sivustoihin interaktiivisia Leaflet-karttoja. ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html#luo-lis%C3%A4osa---osa-1",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html#luo-lisäosa---osa-1"
   },"15": {
-    "doc": "Luo lisäosa (lisäosat)",
-    "title": "Step 0. Asenna Sivujetti",
-    "content": "… . ",
-    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-simple-plugin.html#step-0-asenna-sivujetti",
-    "relUrl": "/tutorials/customize/create-simple-plugin.html#step-0-asenna-sivujetti"
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Preliminaries",
+    "content": "Tietokoneellasi tulee olla asennettuna nodejs 16.4.2 tai uudempi. ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html#preliminaries",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html#preliminaries"
   },"16": {
-    "doc": "Luo lisäosa (lisäosat)",
-    "title": "Step 1. Luo lisäosan pääluokka",
-    "content": "Luo kansio VendorPrefixPluginName plugins-kansioon, ja luo sinne tiedosto VendorPrefixPluginName.php. Muokkaa VendorPrefixPluginName.php:n sisällöksi tekstieditorilla: . &lt;?php declare(strict_types=1); namespace SitePlugins\\VendorPrefixPluginName; use Sivujetti\\UserPlugin\\{UserPluginAPI, UserPluginInterface}; final class VendorPrefixPluginName implements UserPluginInterface { /** * @inheritdoc */ public function __construct(UserPluginAPI $api) { // Täällä ei mitään vielä } } . Tämän jälkeen kansiorakenne tulisi olla: . /plugins ... /VendorPrefixPluginName VendorPrefixPluginName.php ... ",
-    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-simple-plugin.html#step-1-luo-lis%C3%A4osan-p%C3%A4%C3%A4luokka",
-    "relUrl": "/tutorials/customize/create-simple-plugin.html#step-1-luo-lisäosan-pääluokka"
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Step 0: Paikallista plugins-, ja public -kansio",
+    "content": "plugins -kansio sijaitsee oletuksena samassa kansiossa kuin site-kansio, ks. ensimmäinen tutoriaali. ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html#step-0-paikallista-plugins--ja-public--kansio",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html#step-0-paikallista-plugins--ja-public--kansio"
   },"17": {
-    "doc": "Luo lisäosa (lisäosat)",
-    "title": "Luo lisäosa (lisäosat)",
-    "content": " ",
-    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-simple-plugin.html",
-    "relUrl": "/tutorials/customize/create-simple-plugin.html"
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Step 1: Luo lisäosan kansio ja päätiedosto",
+    "content": "Luo kansio ${plugins_kansio}/MycompLeafletMaps ja luo sinne tiedosto ${plugins_kansio}/MycompLeafletMaps/MycompLeafletMaps.php: . &lt;?php declare(strict_types=1); namespace SitePlugins\\MycompLeafletMaps; use Sivujetti\\Auth\\{ACLRulesBuilder}; use Sivujetti\\UserPlugin\\{UserPluginAPI, UserPluginInterface}; final class MycompLeafletMaps implements UserPluginInterface { /** * @inheritdoc */ public function __construct(UserPluginAPI $api) { // todo } /** * @inheritdoc */ public function defineAclRules(ACLRulesBuilder $builder): ACLRulesBuilder { return $builder; } } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html#step-1-luo-lis%C3%A4osan-kansio-ja-p%C3%A4%C3%A4tiedosto",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html#step-1-luo-lisäosan-kansio-ja-päätiedosto"
   },"18": {
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Yhteenveto",
+    "content": "… . Mene osaan kaksi. ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html#yhteenveto",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html#yhteenveto"
+  },"19": {
+    "doc": "Luo lisäosa - osa 1 (lisäosat)",
+    "title": "Luo lisäosa - osa 1 (lisäosat)",
+    "content": " ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-1.html",
+    "relUrl": "/tutorials/customize/create-plugin-part-1.html"
+  },"20": {
+    "doc": "Luo lisäosa - osa 2 (lisäosat)",
+    "title": "Luo lisäosa - osa 2",
+    "content": "… . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-2.html#luo-lis%C3%A4osa---osa-2",
+    "relUrl": "/tutorials/customize/create-plugin-part-2.html#luo-lisäosa---osa-2"
+  },"21": {
+    "doc": "Luo lisäosa - osa 2 (lisäosat)",
+    "title": "Step 1: …",
+    "content": "… . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-2.html#step-1-",
+    "relUrl": "/tutorials/customize/create-plugin-part-2.html#step-1-"
+  },"22": {
+    "doc": "Luo lisäosa - osa 2 (lisäosat)",
+    "title": "Yhteenveto",
+    "content": "… . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-2.html#yhteenveto",
+    "relUrl": "/tutorials/customize/create-plugin-part-2.html#yhteenveto"
+  },"23": {
+    "doc": "Luo lisäosa - osa 2 (lisäosat)",
+    "title": "Luo lisäosa - osa 2 (lisäosat)",
+    "content": " ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/create-plugin-part-2.html",
+    "relUrl": "/tutorials/customize/create-plugin-part-2.html"
+  },"24": {
     "doc": "Kustomoi sivustoa",
     "title": "Kustomointi",
     "content": "Voit kustomoida ja laajentaa Sivujetti -sivustoja ainakin kolmella eri tavalla: . | Muokkaamalla Theme.php -tiedostoa | Muokkaamalla Site.php -tiedostoa | Luomalla kokonaan omia lisäosia | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize-site.html#kustomointi",
     "relUrl": "/tutorials/customize-site.html#kustomointi"
-  },"19": {
+  },"25": {
     "doc": "Kustomoi sivustoa",
     "title": "Kustomoi sivustoa",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize-site.html",
     "relUrl": "/tutorials/customize-site.html"
-  },"20": {
+  },"26": {
+    "doc": "Frontend-API",
+    "title": "Frontend-API",
+    "content": "Frontin API on jaettu kahteen Javascript-moduuliin: . | @sivujetti-commons-for-web-pages, voidaan käyttää julkisissa sivuissa | @sivujetti-commons-for-edit-app, käytetään yleensä lisäosissa | . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/frontend-api.html",
+    "relUrl": "/frontend-api/frontend-api.html"
+  },"27": {
     "doc": "Frontend",
     "title": "Frontend",
     "content": "Sivujetin frontend koostuu useasta Preact -komponentista. Sivuston esikatselu pyörii erillisen &lt;iframe&gt;:n sisällä, jonka pääsivun komponentti luo ja päivittää sivulatauksen sekä navigoinnin yhdeydessä. Kommunikointi pääsivun komponentin ja esikatselu-komponentin välillä tapahtuu MessageChannel -oliolla. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/articles/frontend.html",
     "relUrl": "/articles/frontend.html"
-  },"21": {
+  },"28": {
     "doc": "Koti",
     "title": "Sivujetti docs",
     "content": "Tervetuloa Sivujetti -nettisivurakentaja-sisällönhallintajärjestelmän viralliselle dokumentaatiosivustolle! Tämä sivusto on suunnattu ensisijaisesti web-devaajille ja designereille, joilla on jo aiempaa kokemusta verkkosivujen rakentamisesta. Jos etsit loppukäyttäjälle suunnattua käyttäjän opasta, löydät sen osoitteesta sivujetti.org/tuki. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/#sivujetti-docs",
     "relUrl": "/#sivujetti-docs"
-  },"22": {
+  },"29": {
     "doc": "Koti",
     "title": "Palaute",
     "content": "Tämä sivusto on vielä työn alla. Jos löysit sivustolta jotain parannettavaa, kerro siitä osoitteessa sivujetti.org/yhteys! . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/#palaute",
     "relUrl": "/#palaute"
-  },"23": {
+  },"30": {
     "doc": "Koti",
     "title": "Koti",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/",
     "relUrl": "/"
-  },"24": {
+  },"31": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Asennus lokaalisti Docker",
     "content": "Tässä tutoriaalissa asennat Sivujetti -sivuston konttiympäristöön käyttäen Docker( Desktop)ia ja Alpine Linux -pohjaista imagea. Käyttöjärjestelmäni johon Docker Desktop on asennettu on . Macos Windows Linux ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html",
     "relUrl": "/tutorials/installation-docker.html"
-  },"25": {
+  },"32": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 0. Esivalmistelut",
     "content": "Docker Desktop tulisi olla jo asennettuna ja käynnissä koneellasi. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-0-esivalmistelut",
     "relUrl": "/tutorials/installation-docker.html#step-0-esivalmistelut"
-  },"26": {
+  },"33": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 1. Lataa sivujetti-docker ja Sivujetti",
-    "content": "sivujetti-docker . Lataa sivujetti-docker-0.2.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.15.0.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
+    "content": "sivujetti-docker . Lataa sivujetti-docker-0.3.0.zip. Pura lataamasi zipin sisältö Dokumentit/sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . Pura lataamasi zipin sisältö C:\\Users\\me\\Dokumentit\\sivujetti-docker -kansioon. Tällöin kansiorakenne pitäisi näyttää tältä: . /Dokumentit ... /sivujetti-docker /config fpm-pool.conf ... /to-htdocs &lt;tyhjä&gt; /to-outside-htdocs &lt;tyhjä&gt; Dockerfile ..... Sivujetti . Lataa sivujetti-0.16.0.zip, ja pura se edellisen kohdan kansioon. Siirrä sen public-kansio sekä index.php-tiedosto edellisen stepin to-htdocs -kansioon, ja backend -kansion sisältö kokonaisuudessaan to-outside-htdocs -kansioon. Tämän jälkeen kansiorakenne pitäisi olla: . /Dokumentit ... /sivujetti-docker /config ... /to-htdocs /public /sivujetti index.php /to-outside-htdocs /assets /cli ... Dockerfile ..... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti",
     "relUrl": "/tutorials/installation-docker.html#step-1-lataa-sivujetti-docker-ja-sivujetti"
-  },"27": {
+  },"34": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 2. Luo image",
     "content": "Tämä steppi luo koneellesi uuden imagen sivujetti-docker, jolla voit luoda useita kontteja. Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Siirry kansioon johon purit zipin komennolla cd ~/Dokumentit/sivujetti-docker/. Siirry kansioon johon purit zipin komennolla cd C:\\Users\\me\\Dokumentit\\sivujetti-docker. Luo Docker image ajamalla komento docker build -t sivujetti-docker . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-2-luo-image",
     "relUrl": "/tutorials/installation-docker.html#step-2-luo-image"
-  },"28": {
+  },"35": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 3. Luo ja käynnistä kontti",
     "content": "Tämä steppi luo uuden kontin, tallentaa sen koneellesi ja käynnistää sen. Jos myöhemmin sammutat Docker Desktopin, ja haluat käynnistää kontin uudelleen, katso Muita ohjeita &gt; Kontin käynnistäminen myöhemmin. Vaihtoehto 1: Ilman tiedostojen synkkausta . Tämä komento luo kontin, jonka sisällä tapahtuvat muutokset ei vaikuta 1. stepin lokaaleihin tiedostoihin. Jos haluat muuttaa esim. jotain php-tiedostoa kontin sisällä, se tulee tehdä komentorivin kautta (docker exec). Aja komento docker run -it -d -p 127.0.0.1:3000:8080 sivujetti-docker . Vaihtoehto 2: Synkkauksen kanssa . Tämä komento taas luo kontin, jossa sen sisällä tapahtuvat muutokset synkkautuu 1. stepin lokaalien kansioiden kanssa, ja vice versa. Tällöin voit muokkailla esim. teematiedostoja ilman komentoriviä. Aja komento . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v ~/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v ~/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . docker run -it -d -p 127.0.0.1:3000:8080\\ -w /var/www\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-outside-htdocs:/var/www/sivujetti-backend\\ -v C:/Users/me/Dokumentit/sivujetti-docker/to-htdocs:/var/www/html\\ sivujetti-docker . Ota ylös komennon printtaaman merkkijonon alku (esim. 5e888fd9627b3e28195c18a9f6f35cb91fd025e398245d968cc8fdcc8e4527ba -&gt; 5e88). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-3-luo-ja-k%C3%A4ynnist%C3%A4-kontti",
     "relUrl": "/tutorials/installation-docker.html#step-3-luo-ja-käynnistä-kontti"
-  },"29": {
+  },"36": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 4.1.",
     "content": "Tämä on väliaikainen steppi, ja poistuu kunhan Sivujetillä on “oikea” installeri. Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c 'php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php' . Monkeypatchaa kahta tiedostoa kontissa komennolla docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 /bin/sh -c \"php /var/www/sivujetti-backend/run-this-once.php &amp;&amp; rm /var/www/sivujetti-backend/run-this-once.php\" . Jos edellinen komento ei suostu toimimaan, koita ajaa se ilman viimeisintä osaa (docker cp temp-patch.php 5e88:/var/www/sivujetti-backend/run-this-once.php &amp;&amp; docker exec -it 5e88 php /var/www/sivujetti-backend/run-this-once.php) . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-41",
     "relUrl": "/tutorials/installation-docker.html#step-41"
-  },"30": {
+  },"37": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 4.2.",
     "content": "Asenna tyhjä teema komennolla docker exec -it 5e88 php /var/www/sivujetti-backend/cli.php install-from-dir minimal sivujettiuser user@email.com userpass - - - - / . Tässä kohtaa konttiin pitäisi ilmestyä uusia tiedostoja teemalle, konfiguraatiolle sekä esim. tietokannalle. Jos loit kontin tiedostosynkkauksen kanssa, nämä uudet tiedostot pitäisi nyt näkyä myös lokaaleissa kansioissa (to-htdocs / to-outside-htdocs). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-42",
     "relUrl": "/tutorials/installation-docker.html#step-42"
-  },"31": {
+  },"38": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Step 5. Avaa sivusto",
     "content": "Avaa selain osoittessa http://localhost:3000/index.php?q=/ (sivusto), http://localhost:3000/index.php?q=/jet-login (muokkaustila). Käyttäjätunnus ja salasana samat, kuin edellisessä stepissä (sivujettiuser userpass). Uusi Sivujetti-sivustosi on nyt asennettu kontin sisään. Pidä hauskaa! . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#step-5-avaa-sivusto",
     "relUrl": "/tutorials/installation-docker.html#step-5-avaa-sivusto"
-  },"32": {
+  },"39": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Yhteenveto",
     "content": "Tässä tutoriaalissa: . | Latasit sivujetti-dockerin ja sivujetin uusimman version | Loit imagen sivujetti-docker | Loit uuden kontin em. imagella | Asensit tyhjän teeman konttiin | Avasit kontissa pyörivän sivuston selaimeen | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#yhteenveto",
     "relUrl": "/tutorials/installation-docker.html#yhteenveto"
-  },"33": {
+  },"40": {
     "doc": "Asennus lokaalisti Docker",
     "title": "Muita ohjeita",
     "content": "Kolme ensimmäistä ohjetta on hyödyllisiä silloin, jos loit kontin ilman tiedostojen synkkausta (jolloin ainoa tapa muuttaa tiedostoja kontin sisällä on komentorivin kautta). Tiedostojen muokkaus kontin sisällä . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Aloita muokkaamaan tiedostoa nanolla . | nano /var/www/sivujetti-backend/site/Site.php | tai esim. | nano /var/www/html/config.php | . | Tallenna tiedosto . | Ctrl + x | y/n | . | Poistu kontista . | exit | . | . Tietokannan tarkasteleminen . | Mene kontin sisälle . | docker exec -it 5e88 /bin/sh | . | Avaa sivuston tietokanta sqlite-repliin . | sqlite3 sivujetti-backend/site/my-site.db | . | Tee jotain . | select title, slug from Pages; | . | Poistu sqlite-replistä . | .q | . | Poistu kontista . | exit | . | . Sivuston exporttaaminen . Jos haluat sivuston, ja sinne tekemäsi muutokset kontista ulos, voit tehdä sen esim. seuraavasti: . | Paketoi sivusto kontin sisällä . | docker exec -it 5e88 tar --create --file sivujetti-backend/exported.tar html sivujetti-backend | . | Kopioi paketti kontin sisältä omalle koneellesi (jos loit kontin ilman synkkausta, muutoin se löytyy to-outside-htdocs kansiosta) . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar ~/Lataukset/my-exported-site.tar | . | docker cp 5e88:/var/www/sivujetti-backend/exported.tar C:\\Users\\me\\Dokumentit\\Lataukset\\my-exported-site.tar | . | (Vapaaehtoinen) Poista paketti kontin sisältä docker exec -it 5e88 rm sivujetti-backend/exported.tar | . Nyt sivusto kokonaisuudessaan löytyy Lataukset kansiosta koneeltasi. Kontin käynnistäminen myöhemmin . Kontit sammuu itsekseen, kun Docker Desktop suljetaan. Jos haluat käynnistää luomasi kontin myöhemmin, voit skipata tutoriaalin kaikki stepit ja ajaa suoraan: . docker start 5e88 . Jos et enää muista kontin id:tä, voit etsiä sen docker ps -a tulostamasta listasta. Kontin poistaminen . docker stop 5e88 &amp;&amp; docker rm 5e88 . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-docker.html#muita-ohjeita",
     "relUrl": "/tutorials/installation-docker.html#muita-ohjeita"
-  },"34": {
+  },"41": {
     "doc": "Asennus serverille (Apache/Nginx)",
     "title": "Asennus serverille (Apache/Nginx)",
     "content": "Tätä tutoriaalia ei ole vielä kirjoitettu! Jos olet kiinnostunut tästä tutoriaalista, ehdota sitä palautelomakkeella osoitteessa sivujetti.org/yhteys. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-remote.html",
     "relUrl": "/tutorials/installation-remote.html"
-  },"35": {
+  },"42": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Asennus lokaalisti XAMPP/MAMP",
-    "content": "Tässä tutoriaalissa opit luomaan uuden Sivujetti -sivuston jo koneellesi asennettuun XAMPP/MAMP -ympäristöön. Valitse käyttöjärjestelmäsi . Macos Windows Linux . ",
+    "content": "Tässä tutoriaalissa opit luomaan uuden Sivujetti -sivuston jo koneellesi asennettuun XAMPP 8.2.12 / MAMP 7.1 -ympäristöön. Valitse käyttöjärjestelmäsi . Macos Windows Linux . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html",
     "relUrl": "/tutorials/installation-xampp.html"
-  },"36": {
+  },"43": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 0. Esivalmistelut",
-    "content": "Käynnistä MAMPin serveri on päällä, ja varmista että sen PHP-tulkin versio on 8.0 tai uudempi. Jos haluat selkeämmät virheviestit, tsekkaa että /Applications/MAMP/bin/php/php8.x.x/conf/php.ini löytyy: . [xdebug] zend_extension=\"/Applications/MAMP/bin/php/php8.x.x/lib/php/extensions/no-debug-non-zts-yyyymmdd/xdebug.so\" ;xdebug.mode=debug ;xdebug.start_with_request=yes ; kommentoi myös tämä jos php:n ajaminen komentoriviltä tuntuu hitaalta ; extension=imap.so . Käynnistä Apache XAMPPin hallintapaneelista. Tsekkaa että c:\\xampp\\php\\php.inin rivi extension=sodium eikä extension=zip ei ole kommentoitu. ",
+    "content": "Käynnistä MAMPin serveri on päällä, ja varmista että sen PHP-tulkin versio on 8.1 tai uudempi. Jos haluat selkeämmät virheviestit, tsekkaa että /Applications/MAMP/bin/php/php8.x.x/conf/php.ini löytyy: . [xdebug] zend_extension=\"/Applications/MAMP/bin/php/php8.x.x/lib/php/extensions/no-debug-non-zts-yyyymmdd/xdebug.so\" ;xdebug.mode=debug ;xdebug.start_with_request=yes ; kommentoi myös tämä jos php:n ajaminen komentoriviltä tuntuu hitaalta ; extension=imap.so . Käynnistä Apache XAMPPin hallintapaneelista. Tsekkaa että c:\\xampp\\php\\php.inin rivi extension=sodium eikä extension=zip ei ole kommentoitu. Tsekkaa että c:\\xampp\\apache\\conf\\extra\\httpd-xampp.conf:ssa on rivi LoadFile \"C:/xampp/php/libsodium.dll\". ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-0-esivalmistelut",
     "relUrl": "/tutorials/installation-xampp.html#step-0-esivalmistelut"
-  },"37": {
+  },"44": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 1. Lataa Sivujetti &amp; luo projektikansio",
-    "content": "Lataa sivujetti-0.15.0.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
+    "content": "Lataa sivujetti-0.16.0.zip. Luo uudelle sivustolle työkansio (/Applications/MAMP/htdocs/hello-sivujetti/) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . Luo uudelle sivustolle työkansio (c:\\xampp\\htdocs\\hello-sivujetti\\) ja pura lataamasi zipin sisältö sinne kokonaisuudessaan. Tällöin kansiorakenne pitäisi näyttää tältä: . /htdocs ... /hello-sivujetti /backend /public index.php ... SqliteMySQL ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio",
     "relUrl": "/tutorials/installation-xampp.html#step-1-lataa-sivujetti--luo-projektikansio"
-  },"38": {
+  },"45": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 2. Asenna sivusto",
-    "content": "Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Siirry kansioon johon purit sdk-zipin komennolla cd /Applications/MAMP/htdocs/hello-sivujetti/. Siirry kansioon johon purit sdk-zipin komennolla cd c:\\xampp\\htdocs\\hello-sivujetti\\. Asenna tyhjä teema komennolla php backend/cli.php install-from-dir minimal sivujettiuser user@email.com userpass - - - - /hello-sivujetti/ . Mikäli terminaali sanoo että command not found: php, aja komento alias php='/Applications/MAMP/bin/php/php8.0.0/bin/php' ja yritä sitten uudelleen. Asenna oletussisältö komennolla c:\\xampp\\php\\php.exe backend\\cli.php install-from-dir minimal sivujettiuser user@email.com userpass - - - - /hello-sivujetti/ . Jos komento tulostaa virheviestin, joka sanoo ettei sodium-lisäosaa voitu ladata, kopioi c:\\xampp\\php\\libsodium.dll kansioon c:\\xampp\\apache\\bin\\libsodium.dll ja käynnistä Apache uudestaan. ",
+    "content": "Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Siirry kansioon johon purit sdk-zipin komennolla cd /Applications/MAMP/htdocs/hello-sivujetti/. Siirry kansioon johon purit sdk-zipin komennolla cd c:\\xampp\\htdocs\\hello-sivujetti\\. Asenna tyhjä teema komennolla php backend/cli.php install-from-dir minimal sivujettiuser user@email.com userpass - - - - /hello-sivujetti/ . Mikäli terminaali sanoo että command not found: php, aja komento alias php='/Applications/MAMP/bin/php/php8.3.9/bin/php' ja yritä sitten uudelleen. Asenna oletussisältö komennolla c:\\xampp\\php\\php.exe backend\\cli.php install-from-dir minimal sivujettiuser user@email.com userpass - - - - /hello-sivujetti/ . Jos komento tulostaa virheviestin, joka sanoo ettei sodium-lisäosaa voitu ladata, kopioi c:\\xampp\\php\\libsodium.dll kansioon c:\\xampp\\apache\\bin\\libsodium.dll ja käynnistä Apache uudestaan. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-2-asenna-sivusto",
     "relUrl": "/tutorials/installation-xampp.html#step-2-asenna-sivusto"
-  },"39": {
+  },"46": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 2.1 Luo tietokanta",
-    "content": "Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Luo uusi tietokanta ajamalle komento /Applications/MAMP/Library/bin/mysql -u root -p (kirjoita salasanaksi root), sitten create database hellosivujetti;, ja lopuksi exit . Luo uusi tietokanta ajamalle komento c:\\xampp\\mysql\\bin\\mysql.exe -u root, sitten create database hellosivujetti;, ja lopuksi exit . Voit käyttää myös olemassa olevaa tietokantakäyttäjää root &amp; root:n sijaan. ",
+    "content": "Avaa komentoriviohjelma (⌘ + väli, hae nimellä “terminal”) . Avaa komentoriviohjelma (⊞ Win + X ja sitten A), tai (⊞ Win + R, kirjoita cmd.exe ja paina enter) . Luo uusi tietokanta ajamalle komento /Applications/MAMP/Library/bin/mysql80/bin/mysql -u root -p (kirjoita salasanaksi root), sitten create database hellosivujetti;, ja lopuksi exit . Luo uusi tietokanta ajamalle komento c:\\xampp\\mysql\\bin\\mysql.exe -u root, sitten create database hellosivujetti;, ja lopuksi exit . Voit käyttää myös olemassa olevaa tietokantakäyttäjää root &amp; root:n sijaan. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-21-luo-tietokanta",
     "relUrl": "/tutorials/installation-xampp.html#step-21-luo-tietokanta"
-  },"40": {
+  },"47": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 2.2 Asenna sivusto",
-    "content": "Siirry kansioon johon purit sdk-zipin komennolla cd /Applications/MAMP/htdocs/hello-sivujetti/. Siirry kansioon johon purit sdk-zipin komennolla cd c:\\xampp\\htdocs\\hello-sivujetti\\. Aja komento php backend/cli.php install-from-dir minimal sivujettiuser user@email.com userpass mysql:127.0.0.1:8889 hellosivujetti root root /hello-sivujetti/ . (korvaa ... mysql:127.0.0.1:8889 hellosivujetti ... -&gt; ... mysql hellosivujetti ... jos käytät MAMP:in asetuksissa portteja 80 ja 3306) . Mikäli terminaali sanoo että command not found: php, aja komento alias php='/Applications/MAMP/bin/php/php8.0.0/bin/php' ja yritä sitten uudelleen. Aja komento c:\\xampp\\php\\php.exe backend\\cli.php install-from-dir minimal sivujettiuser user@email.com userpass mysql hellosivujetti root - /hello-sivujetti/ . Jos komento tulostaa virheviestin, joka sanoo ettei sodium-lisäosaa voitu ladata, kopioi c:\\xampp\\php\\libsodium.dll kansioon c:\\xampp\\apache\\bin\\libsodium.dll ja käynnistä Apache uudestaan. ",
+    "content": "Siirry kansioon johon purit sdk-zipin komennolla cd /Applications/MAMP/htdocs/hello-sivujetti/. Siirry kansioon johon purit sdk-zipin komennolla cd c:\\xampp\\htdocs\\hello-sivujetti\\. Aja komento php backend/cli.php install-from-dir minimal sivujettiuser user@email.com userpass mysql:127.0.0.1:8889 hellosivujetti root root /hello-sivujetti/ . (korvaa ... mysql:127.0.0.1:8889 hellosivujetti ... -&gt; ... mysql hellosivujetti ... jos käytät MAMP:in asetuksissa portteja 80 ja 3306) . Mikäli terminaali sanoo että command not found: php, aja komento alias php='/Applications/MAMP/bin/php/php8.3.9/bin/php' ja yritä sitten uudelleen. Aja komento c:\\xampp\\php\\php.exe backend\\cli.php install-from-dir minimal sivujettiuser user@email.com userpass mysql hellosivujetti root - /hello-sivujetti/ . Jos komento tulostaa virheviestin, joka sanoo ettei sodium-lisäosaa voitu ladata, kopioi c:\\xampp\\php\\libsodium.dll kansioon c:\\xampp\\apache\\bin\\libsodium.dll ja käynnistä Apache uudestaan. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-22-asenna-sivusto",
     "relUrl": "/tutorials/installation-xampp.html#step-22-asenna-sivusto"
-  },"41": {
+  },"48": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Step 3. Avaa sivusto",
     "content": "Avaa selain osoittessa http://localhost/hello-sivujetti/index.php?q=/ (sivusto), http://localhost/hello-sivujetti/index.php?q=/jet-login (muokkaustila). Käyttäjätunnus ja salasana samat, kuin edellisessä stepissä (sivujettiuser userpass). Osoittessa voi olla mukana myös portti http://localhost:8888/hello-sivujetti/index.php?q=/ ja http://localhost:8888/hello-sivujetti/index.php?q=/jet-login XAMPP/MAMPin asetuksista riippuen. Uusi Sivujetti-sivustosi on nyt asennettu. Pidä hauskaa! . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#step-3-avaa-sivusto",
     "relUrl": "/tutorials/installation-xampp.html#step-3-avaa-sivusto"
-  },"42": {
+  },"49": {
     "doc": "Asennus lokaalisti XAMPP/MAMP",
     "title": "Yhteenveto",
     "content": "Tässä tutoriaalissa: . | Latasit Sivujetin | Loit uudelle sivustolle projektikansion kehitysympäristöösi | Asensit uuden sivuston projektikansioon | Avasit asennetun sivuston selaimeen | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation-xampp.html#yhteenveto",
     "relUrl": "/tutorials/installation-xampp.html#yhteenveto"
-  },"43": {
+  },"50": {
     "doc": "Asennus",
     "title": "Asennus",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation.html",
     "relUrl": "/tutorials/installation.html"
-  },"44": {
+  },"51": {
     "doc": "Asennus",
     "title": "1. Asennus lokaalisti (XAMPP/MAMP)",
     "content": "Asenna sivusto jo koneellesi asennettuun kehitystympäristöösi. Paras vaihtoehto silloin, kun haluat käyttää jo koneellesi asennettua kehitysympäristöä. Näytä tutoriaali . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation.html#1-asennus-lokaalisti-xamppmamp",
     "relUrl": "/tutorials/installation.html#1-asennus-lokaalisti-xamppmamp"
-  },"45": {
+  },"52": {
     "doc": "Asennus",
     "title": "2. Asennus lokaalisti (Docker)",
     "content": "Asenna sivusto Docker-konttiin koneellesi. Paras vaihtoehto silloin, kun Docker Desktop on jo asennettu koneellesi. Näytä tutoriaali . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation.html#2-asennus-lokaalisti-docker",
     "relUrl": "/tutorials/installation.html#2-asennus-lokaalisti-docker"
-  },"46": {
+  },"53": {
     "doc": "Asennus",
     "title": "3. Asennus suoraan serverille (Nginx/Apache)",
     "content": "Asenna sivusto suoraan internetiin. Paras vaihtehto silloin, jos sinulla on jo webhotelli tai palvelin netissä, ja haluat rakentaa sivuston suoraan sinne. Muista ensin tarkastaa, että palvelimelle on asennettu vaaditut lisäosat github.com/sivujetti/sivujetti#requirements. Näytä tutoriaali ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/installation.html#3-asennus-suoraan-serverille-nginxapache",
     "relUrl": "/tutorials/installation.html#3-asennus-suoraan-serverille-nginxapache"
-  },"47": {
+  },"54": {
     "doc": "Misc",
     "title": "Misc",
     "content": "… . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/misc/misc.html",
     "relUrl": "/misc/misc.html"
-  },"48": {
+  },"55": {
     "doc": "Misc",
     "title": "Kuinka mutatoin sivun sisältöä backendissä?",
     "content": "Jos haluat muuttaa sivun sisältöä ohjelmallisesti backendissä ennen renderöintiä (esim. järjestää Listaus-sisällön sivujen järjestystä jonkin tietyn logiikan mukaan), voit tehdä sen ON_PAGE_BEFORE_RENDER-eventissä Site-luokassa: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\Block\\BlockTree; use Sivujetti\\Block\\Entities\\Block; use Sivujetti\\Page\\Entities\\Page; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { // ... $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function(Page $page, bool $editModeIsOn) { if ($editModeIsOn) return; if ($page-&gt;slug !== \"/some-page\") return; // ei sivu jonka sisältöä halutaan muokata $someListing = BlockTree::findBlock($page-&gt;blocks, fn($b) =&gt; $b-&gt;type === Block::TYPE_LISTING); if (!$someListing) return; // \"/some-page\":sta ei löytynyt yhtään Listaus -sisältölohkoa // Tämä esimerkki siirtää listauksen ensimmäisen sivun aina viimeiseksi $first = $someListing-&gt;__pages[0]; $allButFirst = array_slice($someListing-&gt;__pages, 1); $someListing-&gt;__pages = [...$allButFirst, $first]; }); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/misc/misc.html#kuinka-mutatoin-sivun-sis%C3%A4lt%C3%B6%C3%A4-backendiss%C3%A4",
     "relUrl": "/misc/misc.html#kuinka-mutatoin-sivun-sisältöä-backendissä"
-  },"49": {
+  },"56": {
     "doc": "Misc",
     "title": "Kuinka muutan sivun &lt;head&gt;-tagin sisältöä backendissä?",
     "content": "Voit myös määritellä &lt;head&gt;-tagiin renderöityvää koodia suoraan muokkaustilassa, “Sivusto &gt; Globaalit skriptit” -näkymässä. Näin: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { // ... $api-&gt;filter(\"sivujetti:webPageGeneratedHeadHtml\", fn(string $head) =&gt; str_replace( \"&lt;/title&gt;\", implode(\"\\n \", [ \"&lt;/title&gt;\", \"&lt;link rel=\\\"icon\\\" href=\\\"/favicon.ico\\\" sizes=\\\"any\\\"&gt;\", \"&lt;link rel=\\\"icon\\\" href=\\\"/favicon.svg\\\" type=\\\"image/svg+xml\\\"&gt;\", ]), $head )); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/misc/misc.html#kuinka-muutan-sivun-head-tagin-sis%C3%A4lt%C3%B6%C3%A4-backendiss%C3%A4",
     "relUrl": "/misc/misc.html#kuinka-muutan-sivun-head-tagin-sisältöä-backendissä"
-  },"50": {
+  },"57": {
     "doc": "Misc",
     "title": "Kuinka lisään custom-templaatin listaussisällölle?",
-    "content": ". | Uppaa tiedosto ${sivustonPolkuPalvelimella}site/templates/ kansioon palvelimella | Rekisteröi edellisen stepin tiedosto Site-luokassa | . Step 1: . Uppaa tiedosto ${sivustonPolkuPalvelimella}site/templates/block-listing-jokin-nimi.tmpl.php (esim. /var/www/sivujetti-backend/site/templates/block-listing-links-only.tmpl.php) ja kirjoita sen sisälläksi: . &lt;div class=\"j-Listing&lt;?= $props-&gt;styleClasses ? \" {$this-&gt;escAttr($props-&gt;styleClasses)}\" : \"\" ?&gt;\" data-block-type=\"Listing\" data-block=\"&lt;?= $props-&gt;id ?&gt;\"&gt; &lt;ul&gt; &lt;?php if ($props-&gt;__pages ?? null): ?&gt; &lt;?php foreach ($props-&gt;__pages as $page): ?&gt; &lt;li class=\"list-item list-item-&lt;?= $page-&gt;slug ?&gt;\"&gt; &lt;a href=\"&lt;?= $this-&gt;url($page-&gt;slug) ?&gt;\"&gt; &lt;?= $this-&gt;e($page-&gt;title) ?&gt; &lt;/a&gt; &lt;/li&gt; &lt;?php endforeach; ?&gt; &lt;?php else: ?&gt; &lt;li&gt;&lt;p&gt;&lt;?= $this-&gt;__(\"No %s found.\", strtolower($props-&gt;__pageType-&gt;friendlyNamePlural)) ?&gt;&lt;/p&gt;&lt;/li&gt; &lt;?php endif; ?&gt; &lt;/ul&gt; &lt;?= $this-&gt;renderChildren($props); // mikäli tällä listaussisällöllä on lapsisisältöä ?&gt; &lt;/div&gt; . Step 2: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { $api-&gt;registerBlockRenderer(\"block-listing-jokin-nimi\", for: \"Pages\"); ... } } . ",
+    "content": ". | Uppaa tiedosto ${sivustonPolkuPalvelimella}site/templates/ kansioon palvelimella | Rekisteröi edellisen stepin tiedosto Site-luokassa | . Step 1: . Uppaa tiedosto ${sivustonPolkuPalvelimella}site/templates/block-listing-jokin-nimi.tmpl.php (esim. /var/www/sivujetti-backend/site/templates/block-listing-links-only.tmpl.php) ja kirjoita sen sisälläksi: . &lt;div class=\"j-Listing&lt;?= $props-&gt;styleClasses ? \" {$this-&gt;escAttr($props-&gt;styleClasses)}\" : \"\" ?&gt;\" data-block-type=\"Listing\" data-block=\"&lt;?= $props-&gt;id ?&gt;\"&gt; &lt;ul&gt; &lt;?php if ($props-&gt;__pages ?? null): ?&gt; &lt;?php foreach ($props-&gt;__pages as $page): ?&gt; &lt;li class=\"list-item list-item-&lt;?= $page-&gt;slug ?&gt;\"&gt; &lt;a href=\"&lt;?= $this-&gt;url($page-&gt;slug) ?&gt;\"&gt; &lt;?= $this-&gt;e($page-&gt;title) ?&gt; &lt;/a&gt; &lt;/li&gt; &lt;?php endforeach; ?&gt; &lt;?php else: ?&gt; &lt;li&gt;&lt;p&gt;&lt;?= $this-&gt;__(\"No %s found.\", strtolower($props-&gt;__pageType-&gt;friendlyNamePlural)) ?&gt;&lt;/p&gt;&lt;/li&gt; &lt;?php endif; ?&gt; &lt;/ul&gt; &lt;?= $this-&gt;renderChildren($props); // mikäli tällä listaussisällöllä on lapsisisältöä ?&gt; &lt;/div&gt; . Step 2: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { $api-&gt;registerBlockRenderer(\"block-listing-jokin-nimi\", for: \"Pages\"); ... } } ## Generoidun CSS-tiedoston (themename-generated.css) rakenne Katso myös [ScssWizardFuncs.js#L55](https://github.com/sivujetti/sivujetti/blob/next/frontend/commons-for-edit-app/ScssWizardFuncs.js#L55). ```css @charset \"utf-8\"; /* Generated by Sivujetti at Fri, Sep 22 2023 11:02:04 UTC */ /* ==== Generated styles start ==== */ @import \"maybeImport1\"; @import \"maybeImport2\"; @font-face { /* maybe local import 1 */ } @font-face { /* maybe local import 2 */ } @layer base-styles { :root { --var1: ... } .... } @layer user-styles { /* == global-scoped:start */ /* - */ /* == global-scoped:end */ /* == page-scoped:start */ /* page:-O3lA7PbrJDULirZ0NlU:Pages */ [data-block=\"ulkAUbRlw5e\"] { ... } ... /* page:-O7JLcA-Ged96ot1dle7:Pages */ [data-block=\"up0xjJiaJkX\"] { ... } ... /* == page-scoped:end */ } @layer dev-styles { .cc-1 { ... } ... } /* ==== Generated styles end ==== */ . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/misc/misc.html#kuinka-lis%C3%A4%C3%A4n-custom-templaatin-listaussis%C3%A4ll%C3%B6lle",
     "relUrl": "/misc/misc.html#kuinka-lisään-custom-templaatin-listaussisällölle"
-  },"51": {
+  },"58": {
     "doc": "Sivujetti&bsol;Page",
     "title": "namespace Sivujetti\\Page",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/page.html#namespace-sivujettipage",
     "relUrl": "/api/page/page.html#namespace-sivujettipage"
-  },"52": {
+  },"59": {
     "doc": "Sivujetti&bsol;Page",
     "title": "Sivujetti&bsol;Page",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/page.html",
     "relUrl": "/api/page/page.html"
-  },"53": {
+  },"60": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Rekisteröi oma sisältölohkotyyppi",
     "content": "Tässä ohjeessa lisätään uusi sisältölohkotyyppi MySiteBreakingNews. | Rekisteröi javascript-olio (joka implementoi muokkauslomakkeen, jolla käyttäjä voi muokata sisältöä muokkaustilassa) | Rekisteröi preact-komponentti (joka renderöi sisällön muokkaustilassa) | Rekisteröi Php-luokka (joka renderöi sisällön backendissä / ei-muokkaus -tilassa) | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#rekister%C3%B6i-oma-sis%C3%A4lt%C3%B6lohkotyyppi",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#rekisteröi-oma-sisältölohkotyyppi"
-  },"54": {
+  },"61": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Step 0: Paikallista Site.php, ja public-kansio",
     "content": "Paikallista Site.php, joka sijaitsee samassa kansiossa kuin Theme.php, ks. ensimmäinen tutoriaali. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#step-0-paikallista-sitephp-ja-public-kansio",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#step-0-paikallista-sitephp-ja-public-kansio"
-  },"55": {
+  },"62": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Step 1: Lisää muokkauslomake (Javascript-olio)",
     "content": "Luo tiedosto ${public_kansio}/my-site-edit-app-bundle.js tekstieditorilla: . (function (_sivujettiCommonsForEditApp) { const breakingNewsBlockType = { name: 'MySiteBreakingNews', friendlyName: 'Breaking news', editForm: class extends preact.Component { render() { return 'todo'; } }, stylesEditForm: null, icon: 'box', createOwnProps(_defProps) { return {text: 'News text'}; } }; _sivujettiCommonsForEditApp.api.blockTypes.register(breakingNewsBlockType.name, () =&gt; breakingNewsBlockType); })(sivujettiCommonsEditApp); . Tämä tiedosto luodaan normaalisti rollup-bundlerilla, mutta tutoriaalin yksinkertaisemiseksi kirjoitetaan se nyt käsin. Muokkaa ${site_kansio}/Site.php -tiedostoon tekstieditorilla: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; /** * @psalm-import-type JetFormsMailSendSettings from \\SitePlugins\\JetForms\\JetForms */ class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { $api-&gt;on($api::ON_ROUTE_CONTROLLER_BEFORE_EXEC, function () use ($api) { $api-&gt;enqueueEditAppJsFile(\"my-site-edit-app-bundle.js\"); }); } } . Tämän jälkeen muokkaustilan valikon sisällön lisäyslistassa pitäisi näkyä MySiteBreakingNews sisältölohkotyyppi. Tässä vaiheessa Sivujetti ei kuitenkaan osaa renderöidä sitä. Korjataan tilanne lisäämällä muokkaustilan renderöijä. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#step-1-lis%C3%A4%C3%A4-muokkauslomake-javascript-olio",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#step-1-lisää-muokkauslomake-javascript-olio"
-  },"56": {
+  },"63": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Step 2: Lisää muokkaustilan renderöijä (preact-komponentti)",
     "content": "Luo tiedosto ${public_kansio}/my-site-webpage-preview-renderer-app-bundle.js tekstieditorilla: . (function (_sivujettiWebpagePreviewRendererApp) { class BreakingNewsBlockRenderer extends preact.Component { /** * @param {BlockRendererProps} props * @access protected */ render({block, createDefaultProps, renderChildren}) { return preact.createElement('marquee', {...createDefaultProps()}, block.text, renderChildren() ); } } _sivujettiWebpagePreviewRendererApp.api.registerRenderer('MySiteBreakingNews', BreakingNewsBlockRenderer); })(sivujettiWebPagePreviewRendererApp); . Muokkaa ${site_kansio}/Site.php -tiedostoon tekstieditorilla: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; /** * @psalm-import-type JetFormsMailSendSettings from \\SitePlugins\\JetForms\\JetForms */ class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { $api-&gt;on($api::ON_ROUTE_CONTROLLER_BEFORE_EXEC, function () use ($api) { $api-&gt;enqueuePreviewAppJsFile(\"my-site-webpage-preview-renderer-app-bundle.js\"); }); } } . Tässä kohtaa custom sisältöämme voi lisätä sivuihin muokkaustilassa, mutta Sivujetti osaa renderöidä sen vain muokkaus-tilassa. Lisätään tuki ei-muokkaustilan renderöinnille seuraavassa kohdassa. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#step-2-lis%C3%A4%C3%A4-muokkaustilan-render%C3%B6ij%C3%A4-preact-komponentti",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#step-2-lisää-muokkaustilan-renderöijä-preact-komponentti"
-  },"57": {
+  },"64": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Step 3: Lisää backend-renderöidä (Php-luokka)",
     "content": "Muokkaa ${site_kansio}/Site.php -tiedostoon tekstieditorilla: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\BlockType\\{BlockTypeInterface, JsxLikeRenderingBlockTypeInterface, PropertiesBuilder}; use Sivujetti\\Page\\WebPageAwareTemplate; use Sivujetti\\UserSite\\{UserSiteAPI, UserSiteInterface}; use function Sivujetti\\createElement as el; /** * @psalm-import-type JetFormsMailSendSettings from \\SitePlugins\\JetForms\\JetForms */ class Site implements UserSiteInterface { /** * @param \\Sivujetti\\UserSite\\UserSiteAPI $api */ public function __construct(UserSiteAPI $api) { $api-&gt;registerBlockType(\"MySiteBreakingNews\", new class() implements BlockTypeInterface, JsxLikeRenderingBlockTypeInterface { /** * @inheritdoc */ public function defineProperties(PropertiesBuilder $builder): \\ArrayObject { return $builder -&gt;newProperty(\"text\") -&gt;getResult(); } /** * @inheritdoc */ public function render(object $block, \\Closure $createDefaultProps, \\Closure $renderChildren, WebPageAwareTemplate $tmpl): array { /* Same as: ```jsx &lt;marquee { ...createDefaultProps() }&gt; { text } &lt;marquee&gt; ``` */ return el(\"marquee\", $createDefaultProps(), $block-&gt;text, $renderChildren() ); } }); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#step-3-lis%C3%A4%C3%A4-backend-render%C3%B6id%C3%A4-php-luokka",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#step-3-lisää-backend-renderöidä-php-luokka"
-  },"58": {
+  },"65": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Step 4: Profit",
     "content": "Nyt käyttäjät voi lisätä custom-sisältöämme sivuihin muokkaustilassa, muokata niitä, ja Sivujetti osaa myös renderöidä sen ei-muokkaus -tilassa. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html#step-4-profit",
     "relUrl": "/tutorials/customize/register-custom-block-type.html#step-4-profit"
-  },"59": {
+  },"66": {
     "doc": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "title": "Rekisteröi oma sisältölohkotyyppi (Site.php)",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-custom-block-type.html",
     "relUrl": "/tutorials/customize/register-custom-block-type.html"
-  },"60": {
+  },"67": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Lisää CSS teematiedosto",
     "content": "Tässä ohjeessa lisätään kaksi teematiedostoa sivuston &lt;head&gt; -tagiin muokkaamalla Theme.php -tiedostoa. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#lis%C3%A4%C3%A4-css-teematiedosto",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#lisää-css-teematiedosto"
-  },"61": {
+  },"68": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Step 0. Paikallista Theme.php, ja public-kansio",
-    "content": ". | MAMP -tutoriaali . | Theme.php sijaitsee polussa /Applications/MAMP/htdocs/sivusto/backend/site | teematiedostot sijaitsee polussa /Applications/MAMP/htdocs/sivusto/public | . | MAMP -tutoriaali . | Theme.php sijaitsee polussa c:\\xampp\\htdocs\\sivusto\\backend\\site | teematiedostot sijaitsee polussa c:\\xampp\\htdocs\\sivusto\\public | . | Docker -tutoriaali . | Theme.php sijaitsee polussa /var/www/sivujetti-backend/site | teematiedostot sijaitsee polussa /var/www/html/public | . | . ",
+    "content": ". | MAMP -tutoriaali (Macos) . | Theme.php sijaitsee polussa /Applications/MAMP/htdocs/sivusto/backend/site | teematiedostot sijaitsee polussa /Applications/MAMP/htdocs/sivusto/public | . | XAMPP -tutoriaali (Windows) . | Theme.php sijaitsee polussa c:\\xampp\\htdocs\\sivusto\\backend\\site | teematiedostot sijaitsee polussa c:\\xampp\\htdocs\\sivusto\\public | . | Docker -tutoriaali . | Theme.php sijaitsee polussa /var/www/sivujetti-backend/site | teematiedostot sijaitsee polussa /var/www/html/public | . | . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#step-0-paikallista-themephp-ja-public-kansio",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#step-0-paikallista-themephp-ja-public-kansio"
-  },"62": {
+  },"69": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Step 1: Siirrä tai luo tiedostot public-kansioon",
     "content": "Luo tai siirrä tiedostot ${public_kansio}/some-css-framework.min.css sekä ${public_kansio}/my-site-main.css. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#step-1-siirr%C3%A4-tai-luo-tiedostot-public-kansioon",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#step-1-siirrä-tai-luo-tiedostot-public-kansioon"
-  },"63": {
+  },"70": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Step 2: Rekisteröi tiedostot",
     "content": "Muokkaa ${site_kansio}/Theme.php -tiedostoon tekstieditorilla: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserTheme\\{UserThemeAPI, UserThemeInterface}; class Theme implements UserThemeInterface { /** * @param \\Sivujetti\\UserTheme\\UserThemeAPI $api */ public function __construct(UserThemeAPI $api) { if (!$api-&gt;isCssFileEnqueued(\"some-css-framework.min.css\")) $api-&gt;enqueueCssFile(\"some-css-framework.min.css\"); $api-&gt;enqueueCssFile(\"my-site-main.css\", [\"data-my-attr\" =&gt; \"foo\"]); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#step-2-rekister%C3%B6i-tiedostot",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#step-2-rekisteröi-tiedostot"
-  },"64": {
+  },"71": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Step 3: Profit",
     "content": "Tämän jälkeen Sivujetti sisällyttää rekisteröidyt tiedostot sivuston &lt;head&gt; -tagiin esim. seuraavasti: . &lt;link href=\"/sivusto/public/some-css-framework.min.css?v=dc5e2a1e\" rel=\"stylesheet\"&gt; &lt;link href=\"/sivusto/public/my-site-main.css?v=dc5e2a1e\" rel=\"stylesheet\" data-my-attr=\"foo\"&gt; . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#step-3-profit",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#step-3-profit"
-  },"65": {
+  },"72": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Lisää tiedosto vain tiettyyn sivuun",
     "content": "Jos halut sisällyttää tiedoston vain esim. /yhteys -sivuun, rekisteröi tiedosto tapahtumakuuntelijassa; näin: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\Page\\Entities\\Page; use Sivujetti\\UserTheme\\{UserThemeAPI, UserThemeInterface}; class Theme implements UserThemeInterface { /** * @param \\Sivujetti\\UserTheme\\UserThemeAPI $api */ public function __construct(UserThemeAPI $api) { $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function(Page $page, bool $editModeIsOn) use ($api) { if ($page-&gt;slug === \"/yhteys\") { $api-&gt;enqueueCssFile(\"special.css\"); } }); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html#lis%C3%A4%C3%A4-tiedosto-vain-tiettyyn-sivuun",
     "relUrl": "/tutorials/customize/register-theme-css-file.html#lisää-tiedosto-vain-tiettyyn-sivuun"
-  },"66": {
+  },"73": {
     "doc": "Lisää CSS teematiedosto (Theme.php)",
     "title": "Lisää CSS teematiedosto (Theme.php)",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-css-file.html",
     "relUrl": "/tutorials/customize/register-theme-css-file.html"
-  },"67": {
+  },"74": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Lisää Javascript teematiedosto",
     "content": "Tässä ohjeessa lisätään kaksi javascript-tiedostoa sivuston &lt;body&gt; -tagin loppuun muokkaamalla Theme.php -tiedostoa. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#lis%C3%A4%C3%A4-javascript-teematiedosto",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#lisää-javascript-teematiedosto"
-  },"68": {
+  },"75": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Step 0. Paikallista Theme.php, ja public-kansio",
     "content": "Ks. edellinen tutoriaali . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#step-0-paikallista-themephp-ja-public-kansio",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#step-0-paikallista-themephp-ja-public-kansio"
-  },"69": {
+  },"76": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Step 1: Siirrä tai luo tiedostot public-kansioon",
     "content": "Luo tai siirrä tiedostot ${public_kansio}/some-lib.min.js sekä ${public_kansio}/with-attrs.js. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#step-1-siirr%C3%A4-tai-luo-tiedostot-public-kansioon",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#step-1-siirrä-tai-luo-tiedostot-public-kansioon"
-  },"70": {
+  },"77": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Step 2: Rekisteröi tiedostot",
     "content": "Muokkaa ${site_kansio}/Theme.php -tiedostoon tekstieditorilla: . &lt;?php declare(strict_types=1); namespace MySite; use Sivujetti\\UserTheme\\{UserThemeAPI, UserThemeInterface}; class Theme implements UserThemeInterface { /** * @param \\Sivujetti\\UserTheme\\UserThemeAPI $api */ public function __construct(UserThemeAPI $api) { if (!$api-&gt;isJsFileEnqueued(\"some-lib.min.js\")) $api-&gt;enqueueJsFile(\"some-lib.min.js\"); $api-&gt;enqueueJsFile(\"with-attrs.js\", [ \"data-attr\" =&gt; \"foo\", ]); } } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#step-2-rekister%C3%B6i-tiedostot",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#step-2-rekisteröi-tiedostot"
-  },"71": {
+  },"78": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Step 3: Profit",
     "content": "Tämän jälkeen Sivujetti sisällyttää rekisteröidyt tiedostot sivuston &lt;body&gt; -tagin loppuun esim. seuraavasti: . &lt;script src=\"/sivusto/public/some-lib.js?v=dc5e2a1e\"&gt;&lt;/script&gt; &lt;script src=\"/sivusto/public/with-attrs.js?v=dc5e2a1e\" data-attr=\"foo\"&gt;&lt;/script&gt; . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#step-3-profit",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#step-3-profit"
-  },"72": {
+  },"79": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Lisää tiedosto vain tiettyyn sivuun",
     "content": "ks. edellinen ohje. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html#lis%C3%A4%C3%A4-tiedosto-vain-tiettyyn-sivuun",
     "relUrl": "/tutorials/customize/register-theme-js-file.html#lisää-tiedosto-vain-tiettyyn-sivuun"
-  },"73": {
+  },"80": {
     "doc": "Lisää Javascript teematiedosto (Theme.php)",
     "title": "Lisää Javascript teematiedosto (Theme.php)",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/customize/register-theme-js-file.html",
     "relUrl": "/tutorials/customize/register-theme-js-file.html"
-  },"74": {
+  },"81": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "module @sivujetti-commons-for-edit-app",
+    "content": "Moduuli, jota voidaan käyttää lisäosissa, ks. Luo lisäosa - osa 1 - todo. Tämäkin moduuli, kuten @sivujetti-commons-for-web-pages, on teknisesti globaali muuttuja jota [rollupin ansiosta] vain käytetään kuten tavallista javascript-moduulia. Lähdekoodi . frontend/commons-for-edit-app/main.js . | . Exports . | __() | api | env (@sivujetti-commons-for-web-pages) | events | floatingDialog | FormGroup | FormGroupInline | handleSubmit | hasErrors | hookForm | http (@sivujetti-commons-for-web-pages) | Icon | Input | InputError | InputErrors | MenuSection | objectUtils | reHookValues | setFocusTo | stringUtils | Tabs | Textarea | timingUtils | unhookForm | urlUtils (@sivujetti-commons-for-web-pages) | validationConstraints | . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#module-sivujetti-commons-for-edit-app",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#module-sivujetti-commons-for-edit-app"
+  },"82": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "__()",
+    "content": "export function __(key: string, ...args?: any) =&gt; string; . Examples . import {__} from '@sivujetti-commons-for-edit-app'; const translated = __('Cancel'); console.log(translated); // \"Kumoa\" const translated2 = __('New %s created', __('page')); console.log(translated2); // \"Uusi sivu luotiin\" . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#__",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#__"
+  },"83": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "api",
+    "content": "export const api: SivujettiFrontendApi; interface SivujettiFrontendApi { getPageTypes(): Array&lt;PageType&gt;; getBlockRenderers(): Array&lt;BlockRenderer&gt;; menuPanel: MenuPanel; blockTypes: BlockTypesRegister; saveButton: { todo: todo; }; user: { can(doWhat: 'doAnything'|'editGlobalStylesVisually'|'editBlockCss'|'createPageTypes'| 'createPages'|'createReusableBranches'|'createGlobalBlockTrees'|'specializeGlobalBlocks'| 'editTheWebsitesBasicInfo'|'editTheWebsitesGlobalScripts'|'listUploads'): boolean; getRole(): number; ROLE_SUPER_ADMIN: number; ROLE_ADMIN: number; ROLE_ADMIN_EDITOR: number; ROLE_EDITOR: number; ROLE_AUTHOR: number; ROLE_CONTRIBUTOR: number; ROLE_FOLLOWER: number; }; registerTranslationstrings(strings: {[key: string]: string}): void; } interface PageType { name: string; friendlyName: string; friendlyNamePlural: string; description: string; slug: string; defaultLayoutId: string; status: number; isListable: boolean; initialBlocks: Array&lt;BlockBlueprint&gt;; ownFields: Array&lt;PageTypeField&gt;; defaultFields: { [key: string]: { defaultValue: string; }; }; } interface PageTypeField { name: string; friendlyName: string; dataType: { type: 'text'|'json'|'int'|'uint'; isNullable: boolean; length?: number; validationRules?: Array; canBeEditedBy?: number; rel?: string; }; defaultValue: string|Array|Object|null; } interface BlockBlueprint { blockType: string; initialOwnData: {[key: string]: any;}; initialDefaultsData: { title: string; renderer: string; styleClasses: string; }; initialStyles: Array&lt;StyleChunk&gt;; initialChildren: Array&lt;BlockBlueprint&gt;; } interface StyleChunk { scss: string; scope: { kind: styleScopeKind; layer: stylesLayer; page?: string; // Example '-NGLsmQwm7aOSH-lS1-J:Pages' }; data?: { title?: string; customizationSettings?: { varDefs: Array&lt;VisualStylesFormVarDefinition&gt;; }; associatedBlockTypes?: Array&lt;string&gt;; }; } type styleScopeKind = 'single-block'|'custom-class'|'base-vars'|'base-freeform'; type stylesLayer = 'user-styles'|'dev-styles'|'base-styles'; interface VisualStylesFormVarDefinition { varName: string; // Example 'textAlign' cssProp: string; // Example 'text-align' cssTemplate: string|null; // Example 'border: 1px solid %s' cssSubSelector: string|null; // Example '&gt;img' widgetSettings: VisualStylesFormVarDefinitionWidgetSettings &amp; {[possibleExtras: string]: any;}; } interface VisualStylesFormVarDefinitionWidgetSettings { valueType?: string; // 'color'|'option' etc. renderer?: preact.Component; // ColorValueInput|OptionValueInput etc. label: string; // Example 'Text align' defaultThemeValue?: // Example {num: '6', unit: 'rem'} ColorValue | GridColumnsValue | ImageValue | LengthValue | OptionValue | string; } interface BlockRenderer { fileId: string; friendlyName: string|null; associatedWith: string|null; } interface MenuPanel { scrollTo(blockId: string, behavior: 'smooth'|'auto' = 'smooth'); scrollToSection(name: mainPanelSectionName, behavior: 'smooth'|'auto' = 'smooth'); getOuterEl(): HTMLElement; setSectionCmp(name: mainPanelSectionName, cmp: preact.Component); getSectionCmp(name: mainPanelSectionName): preact.Component|null; getSectionEl(name: mainPanelSectionName): HTMLElement; registerSection(name: string, Cls: preact.AnyComponent): void; getSection(name: string, doThrowIfNotFound: boolean = false): preact.AnyComponent; getSections(): Map&lt;preact.AnyComponent&gt;; } type mainPanelSectionName = 'onThisPage'|'baseStyles'; interface BlockTypesRegister { setup(defaultBlockTypes: Array&lt;[string, BlockTypeDefinition]&gt;): void; register(name: string, blockTypeFactory: () =&gt; BlockTypeDefinition): void; get(name: string): BlockTypeDefinition; getIconId(blockType: BlockTypeDefinition|string, fallback: string = 'box'): string; entries(): IterableIterator&lt;string, BlockTypeDefinition&gt;; } interface BlockTypeDefinition { name: string; // Examples 'Text' friendlyName: string; // Examples 'Text' editForm: preact.Component|null; stylesEditForm: 'default'|preact.Component|null; createOwnProps(defProps: {[key: string]: any;}): {[propName: string]: any}; icon?: string; // Examples 'blockquote' } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#api",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#api"
+  },"84": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "events",
+    "content": "export const events: Events; interface Events { on(when: string, thenDo: (...any) =&gt; void): Function; emit(eventName: string, ...args: any): void; } . Examples . import {events} from '@sivujetti-commons-for-edit-app'; const unregister = events.on('route-changed', (e, isMainColumnView) =&gt; { console.log('route changed', e) }); unregister(); events.trigger('my-plugin-did-something', 'thing'); . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#events",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#events"
+  },"85": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "floatingDialog",
+    "content": "export const floatingDialog: FloatingDialog; interface FloatingDialog { open( Renderer: preact.ComponentType|string, settings: FloatingDialogSettingsInput &amp; {[key: string]: any;}, rendererProps: Object ): void; close(): void; setTitle(title: string): void; setOnBeforeClose(fn: () =&gt; void): void; setHeight(height: number, instructions: 'animate'|'' = ''): void; } interface FloatingDialogSettingsInput { title: string; width?: number; height?: number; } . Examples . import {floatingDialog} from '@sivujetti-commons-for-edit-app'; class MyPopup extends preact.Component { render({prop}) { return [ &lt;div&gt;{ prop }&lt;/div&gt;, &lt;button onClick={ () =&gt; floatingDialog.close() } class=\"btn btn-link\" type=\"button\"&gt;Ok&lt;/button&gt; ]; } } floatingDialog.open(MyPopup, { title: 'My popup', }, { prop: 'foo', }); . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#floatingdialog",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#floatingdialog"
+  },"86": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;FormGroup/&gt;",
+    "content": "export class FormGroup extends preact.Component&lt;{className?: string;}, any&gt; { // No public methods } . Examples . import {FormGroup, hookForm, Input, InputErrors} from '@sivujetti-commons-for-edit-app'; class MyForm extends preact.Component { componentWillMount() { this.setState(hookForm(this, [ {name: 'something', value: '..', validations: [['minLength', 1]], label: 'Something'}, ])); } render(_, {values, errors}) { return &lt;div&gt; &lt;FormGroup className=\"foo\"&gt; &lt;label htmlFor=\"myform_something\" class=\"form-label\"&gt;Something&lt;/label&gt; &lt;Input vm={ this } prop=\"something\" id=\"myform_something\"/&gt; &lt;InputErrors vm={ this } prop=\"something\"/&gt; &lt;/FormGroup&gt; &lt;div&gt; You typed: { values.something.value } &lt;/div&gt; &lt;div&gt; Errors: { JSON.stringify(errors.something) } &lt;/div&gt; &lt;/div&gt;; } } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#formgroup",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#formgroup"
+  },"87": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;FormGroupInline/&gt;",
+    "content": "export class FormGroupInline extends preact.Component&lt;{ className?: string; labelFlow?: 'ellipsis'|'break'; }, any&gt; { // No public methods } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#formgroupinline",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#formgroupinline"
+  },"88": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "handleSubmit()",
+    "content": "export function handleSubmit( cmp: preact.Component, fn: Promise&lt;any&gt;, e: Event = null ): boolean|null; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#handlesubmit",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#handlesubmit"
+  },"89": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "hasErrors()",
+    "content": "export function hasErrors(cmp: preact.Component): boolean; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#haserrors",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#haserrors"
+  },"90": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "hookForm()",
+    "content": "export function hookForm( cmp: preact.Component, inputs: Array&lt;InputDefinition&gt;, initialState: {[key: string]: any;} = {} ): {[key: string]: any;}; interface InputDefinition { name: string; // e.g. 'numColumns' value: string|number; // e.g. 1, 'foo' validations: Array&lt;[string, ...any]&gt;; // e.g. [['min', 0], ['max', 12]] id?: string; // e.g. 'numColumns' label?: string; // e.g. 'Num columns' valueType?: string; // e.g. 'int' type?: string; // e.g. 'number' // maybe other props } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#hookform",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#hookform"
+  },"91": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;Icon/&gt;",
+    "content": "export class Icon extends preact.Component&lt;{ // see github.com/sivujetti/sivujetti/blob/master/public/sivujetti/assets/tabler-sprite-custom.svg iconId: stockId|string; className?: string; }, any&gt; { // No public methods } type stockId = 'alert-triangle' | 'arrow-back-up' | 'at' | 'ban' | 'blockquote' | 'box' | 'check' | 'checkbox' | 'chevron-down' | 'chevron-right' | 'circle-plus' | 'circle-x' | 'circle' | 'code' | 'columns-3' | 'database' | 'device-floppy' | 'dots' | 'external-link' | 'eye' | 'eye-off' | 'file-info' | 'file-plus' | 'file-text' | 'file' | 'files' | 'grid-dots' | 'hand-finger' | 'heading' | 'info-circle' | 'layout-columns' | 'layout-grid' | 'layout-list' | 'layout-rows' | 'letter-p' | 'letter-t' | 'lifebuoy' | 'list' | 'list-details' | 'macro' | 'map-pin' | 'menu-2' | 'message-2' | 'new-section' | 'number-1' | 'palette' | 'pencil' | 'photo' | 'plus' | 'question-mark' | 'rectangle' | 'refresh' | 'rotate' | 'search' | 'selector' | 'settings' | 'send' | 'slideshow' | 'star' | 'writing' | 'x'; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#icon",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#icon"
+  },"92": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;Input/&gt;",
+    "content": "export class Input extends preact.Component&lt;{ vm: preact.Component; prop: string; }, any&gt; { // No public methods } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#input",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#input"
+  },"93": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;InputError/&gt;",
+    "content": "export class InputError extends preact.Component&lt;{ errorMessage?: string; }, any&gt; { // No public methods } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#inputerror",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#inputerror"
+  },"94": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;InputErrors/&gt;",
+    "content": "export class InputErrors extends preact.Component&lt;{ vm?: preact.Component; prop?: string; errors?: Array&lt;{message: string;}&gt;; }, any&gt; { // No public methods } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#inputerrors",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#inputerrors"
+  },"95": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;MenuSection/&gt;",
+    "content": "export class MenuSection extends preact.Component&lt;{ title: string; subtitle: string; iconId: string; colorClass: string; outerClass?: string; buttonClass?: string; onIsCollapsedChanged?: (to: boolean) =&gt; void; initiallyIsCollapsed?: boolean; }, any&gt; { collapseOrUncollapse(): void; getEl(): HTMLElement; } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#menusection",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#menusection"
+  },"96": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "objectUtils",
+    "content": "export const objectUtils: { clonePartially(keys: Array&lt;string&gt;, obj: Object): Object; cloneDeep(obj: Object): Object, cloneDeepWithChanges(obj: Object, doTheChanges: (newCopyFreeToMutate: Object) =&gt; any): Object; } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#objectutils",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#objectutils"
+  },"97": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "reHookValues()",
+    "content": "export function reHookValues(cmp: preact.Component, inputs: Array&lt;InputDefinition&gt;): void; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#rehookvalues",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#rehookvalues"
+  },"98": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "setFocusTo()",
+    "content": "export function setFocusTo(ref: preact.Ref): void; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#setfocusto",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#setfocusto"
+  },"99": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "stringUtils",
+    "content": "export const stringUtils: StringUtils; interface StringUtils { slugify(text: string): string; capitalize(str: string): string; } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#stringutils",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#stringutils"
+  },"100": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;Tabs/&gt;",
+    "content": "export class Tabs extends preact.Component&lt;{ links: Array&lt;preact.ComponentChild&gt;; onTabChanged: (idx: number) =&gt; any; initialIndex?: number; className?: string; getTabName?: (linkText: string, tabIdx: number) =&gt; string|null; }, any&gt; { changeTab(toIdx: number): void; } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#tabs",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#tabs"
+  },"101": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "&lt;Textarea/&gt;",
+    "content": "export class Textarea extends preact.Component&lt;{ vm: preact.Component; prop: string; }, any&gt; { // No public methods } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#textarea",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#textarea"
+  },"102": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "timingUtils",
+    "content": "export const timingUtils: TimingUtils; interface TimingUtils { debounce(func: Function, wait: number, immediate?: boolean): Function; } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#timingutils",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#timingutils"
+  },"103": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "unhookForm()",
+    "content": "export function unhookForm(cmp: preact.Component): void; . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#unhookform",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#unhookform"
+  },"104": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "validationConstraints",
+    "content": "export const validationConstraints: ValidationConstraints; interface ValidationConstraints { HARD_SHORT_TEXT_MAX_LEN: number; // Default 1024 HARD_LONG_TEXT_MAX_LEN: number; // Default 128000 MAX_PROSE_HTML_LENGTH: number; // Default 128000 INDEX_STR_MAX_LENGTH: number; // Default 92 SLUG_REGEXP: string; // Default '^/[a-zA-Z0-9_-]*$' } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html#validationconstraints",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html#validationconstraints"
+  },"105": {
+    "doc": "sivujetti-commons-for-edit-app",
+    "title": "sivujetti-commons-for-edit-app",
+    "content": " ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-edit-app.html",
+    "relUrl": "/frontend-api/sivujetti-commons-for-edit-app.html"
+  },"106": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "module @sivujetti-commons-for-web-pages",
+    "content": "Minimaalinen moduuli, jota voidaan käyttää julkisten sivujen yhteydessä. Muuntuu rollupissa muodosta . import {foo} from '@sivujetti-commons-for-web-pages'; . muotoon -&gt; . import {foo} from '${public_path}/sivujetti/sivujetti-commons-for-web-pages.js`; . ja sitten -&gt; . (function (_sivujettiCommonsForWebPages) { const _foo = _sivujettiCommonsForWebPages.foo; })(window.sivujettiCommonsForWebPages); . (, siis moduuli on globaali muuttuja, vaikka se importataan). Ks. myös rollup.config.js . | . Lähdekoodi . frontend/commons-for-web-pages/main.js . | . Exports . | env | http | urlAndSlugUtils | urlUtils | . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html#module-sivujetti-commons-for-web-pages",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html#module-sivujetti-commons-for-web-pages"
+  },"107": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "env",
+    "content": "Lähinnä testihin tarkoitettu configuraatio-olio. export const env: Env; interface Env { window: Window; document: Document; normalTypingDebounceMillis: number; } . Example . import {env} from '@sivujetti-commons-for-web-pages'; console.log(env.normalTypingDebounceMillis) // 200 . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html#env",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html#env"
+  },"108": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "http",
+    "content": "export const http: Http; interface Http { new ( fetchFn: (input: RequestInfo | URL, init?: RequestInit) =&gt; Promise&lt;Response&gt; = (url, settings) =&gt; window.fetch(url, settings), makeUrl: (url: string) =&gt; string = url =&gt; url ): Http; get&lt;T&gt;(url: string, settings: RequestInit = {}): Promise&lt;T&gt;; post&lt;T&gt;(url: string, data: Object, settings: RequestInit = {}, defaults: RequestInit = {method: 'POST'}): Promise&lt;T&gt;; put&lt;T&gt;(url: string, data: Object, settings: RequestInit = {}): Promise&lt;T&gt;; delete&lt;T&gt;(url: string, settings: RequestInit = {}): Promise&lt;T&gt;; } . Example . import {http} from '@sivujetti-commons-for-web-pages'; const settings = await getSettings(); console.log(settings); // [...] async function getSettings() { try { return await http.get('/plugins/jet-forms/settings/mailSendSettings'); } catch (err) { window.console.error(err); } } . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html#http",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html#http"
+  },"109": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "urlAndSlugUtils",
+    "content": "export const urlAndSlugUtils: UrlAndSlugUtils; interface UrlAndSlugUtils { getCompletedUrl(url: string): string; normalizeExternalUrl(url: string): string; } . Examples . import {urlAndSlugUtils} from '@sivujetti-commons-for-web-pages'; console.log(urlAndSlugUtils.getCompletedUrl('/slug')); // \"/sub-dir/slug\" console.log(urlAndSlugUtils.normalizeExternalUrl('foo.com')); // \"http://foo.com\" . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html#urlandslugutils",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html#urlandslugutils"
+  },"110": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "urlUtils",
+    "content": "export const urlUtils: UrlUtils; interface UrlUtils { baseUrl: string; assetBaseUrl: string; currentPageSlug: string; cacheBustStr: string; // website.versionId by default new ( envConfig: {baseUrl?: string; assetBaseUrl?: string; currentPageSlug?: string; cacheBustStr?: string;}, env: Env ): UrlUtils; withCacheBustStr(url: string): string; makeUrl(url: string, includeDomain: boolean = false, normalizeQ: boolean = true): string; makeAssetUrl(url: string, includeDomain: boolean = false): string; redirect(url: string, includeDomain: boolean = false, normalizeQ: boolean = false): void; } . Examples . import {urlUtils} from '@sivujetti-commons-for-web-pages'; console.log(urlUtils.baseurl); // \"/index.php?q=/\" console.log(urlUtils.assetBaseurl); // \"/\" console.log(urlUtils.currentPageSlug); // \"/\" console.log(urlUtils.cacheBustStr); // \"abdc1234\" console.log(urlUtils.withCacheBustStr('foo.png')); // \"foo.png?v=abdc1234\" console.log(urlUtils.makeUrl('/slug')); // \"/index.php?q=/slug\" console.log(urlUtils.makeAssetUrl('/public/uploads/pic.png')); // \"/public/uploads/pic.png\" urlUtils.redirect('/_edit&amp;show-message=page-deleted', true); . ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html#urlutils",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html#urlutils"
+  },"111": {
+    "doc": "sivujetti-commons-for-web-pages",
+    "title": "sivujetti-commons-for-web-pages",
+    "content": " ",
+    "url": "https://sivujetti.github.io/dev-docs/fi/frontend-api/sivujetti-commons-for-web-pages.html",
+    "relUrl": "/frontend-api/sivujetti-commons-for-web-pages.html"
+  },"112": {
     "doc": "Sivujetti&bsol;BlockType&bsol;BlockTypeInterface",
     "title": "interface Sivujetti\\BlockType\\BlockTypeInterface",
     "content": "Rajapinta lohkotyypeille, kuten ButtonBlockType, TextBlockType tai ContactFormBlockType. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_block-type-interface.html#interface-sivujettiblocktypeblocktypeinterface",
     "relUrl": "/api/block-type/sivujetti_block-type_block-type-interface.html#interface-sivujettiblocktypeblocktypeinterface"
-  },"75": {
+  },"113": {
     "doc": "Sivujetti&bsol;BlockType&bsol;BlockTypeInterface",
     "title": "Synopsis",
     "content": "interface BlockTypeInterface { /* Metodit */ public defineProperties(PropertiesBuilder $builder): ArrayObject&lt;BlockProperty&gt; } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_block-type-interface.html#synopsis",
     "relUrl": "/api/block-type/sivujetti_block-type_block-type-interface.html#synopsis"
-  },"76": {
+  },"114": {
     "doc": "Sivujetti&bsol;BlockType&bsol;BlockTypeInterface",
     "title": "Sivujetti&bsol;BlockType&bsol;BlockTypeInterface",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_block-type-interface.html",
     "relUrl": "/api/block-type/sivujetti_block-type_block-type-interface.html"
-  },"77": {
+  },"115": {
     "doc": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "title": "class Sivujetti\\BlockType\\PropertiesBuilder",
     "content": "Builder-luokka, jolla voi määritellä lohkotyypin kentät. Esim. ImageBlockTypellä on src-, altText-, ja caption-kentät. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_properties-builder.html#class-sivujettiblocktypepropertiesbuilder",
     "relUrl": "/api/block-type/sivujetti_block-type_properties-builder.html#class-sivujettiblocktypepropertiesbuilder"
-  },"78": {
+  },"116": {
     "doc": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "title": "Synopsis",
     "content": "final class PropertiesBuilder { /* Vakiot */ const DATA_TYPE_TEXT = BlockProperty::DATA_TYPE_TEXT; const DATA_TYPE_UINT = BlockProperty::DATA_TYPE_UINT; /* Metodit */ public newProperty(string $name, ?string $dataType = null): $this public dataType(string $type, ?int $length = null, ?array $validationRules = null): $this public getResult(): ArrayObject&lt;int, BlockProperty&gt; } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_properties-builder.html#synopsis",
     "relUrl": "/api/block-type/sivujetti_block-type_properties-builder.html#synopsis"
-  },"79": {
+  },"117": {
     "doc": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "title": "Vakiot",
     "content": "DATA_TYPE_TEXT ... DATA_TYPE_UINT ... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_properties-builder.html#vakiot",
     "relUrl": "/api/block-type/sivujetti_block-type_properties-builder.html#vakiot"
-  },"80": {
+  },"118": {
     "doc": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "title": "Metodit",
     "content": "newProperty() . Määrittelee uuden kentän. Signature . public function newProperty(string $name, ?string $dataType = null): PropertiesBuilder . Esimerkit . $builder-&gt;newProperty(\"numColumns\", $builder::DATA_TYPE_UINT); . Tietotyypeillä on oletuksena seuraavat validaattorit: . | Tyypi | Validaattorit | . | \"text\" ($builder::DATA_TYPE_TEXT) | [\"type\", \"string\"][\"maxLength\", 1024] | . | \"json\" | [\"type\", \"string\"][\"maxLength\", 256000] | . | \"int\" | [\"type\", \"number\"] | . | \"uint\" ($builder::DATA_TYPE_UINT) | [\"type\", \"number\"][\"min\", 0] | . Jos haluat yliajaa oletusvalidaattorien asetuksia, korvaa $builder-&gt;newProperty(\"year\", $builder::DATA_TYPE_TEXT) -&gt; $builder-&gt;newProperty(\"year\")-&gt;dataType($builder::DATA_TYPE_TEXT, validationRules: [[\"maxLength\", 4]]). dataType() . Määrittelee edellisen kentän tietotyypin. Signature . public function dataType(string $type, ?int $length = null, ?array $validationRules = null): PropertiesBuilder . Esimerkit . $builder -&gt;newProperty(\"stringPropWithLength\") -&gt;dataType($builder::DATA_TYPE_TEXT, 64); . getResult() . … . Signature . public function getResult(): \\ArrayObject&lt;int, BlockProperty&gt; . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_properties-builder.html#metodit",
     "relUrl": "/api/block-type/sivujetti_block-type_properties-builder.html#metodit"
-  },"81": {
+  },"119": {
     "doc": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "title": "Sivujetti&bsol;BlockType&bsol;PropertiesBuilder",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/block-type/sivujetti_block-type_properties-builder.html",
     "relUrl": "/api/block-type/sivujetti_block-type_properties-builder.html"
-  },"82": {
+  },"120": {
     "doc": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "title": "interface Sivujetti\\Page\\Entities\\Page",
     "content": "Entiteettiluokka sivuille. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/sivujetti_page_entities_page.html#interface-sivujettipageentitiespage",
     "relUrl": "/api/page/sivujetti_page_entities_page.html#interface-sivujettipageentitiespage"
-  },"83": {
+  },"121": {
     "doc": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "title": "Synopsis",
     "content": "class Page extends \\stdClass { /* Vakiot */ const STATUS_PUBLISHED = 0; const STATUS_DRAFT = 1; /* Muuttujat */ public string $slug; public string $path; public int $level; public string $title; public ?object $meta; public string $id; public string $type; public Block[] $blocks; public int $status; public int $createdAt; public int $lastUpdatedAt; public Layout $layout; } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/sivujetti_page_entities_page.html#synopsis",
     "relUrl": "/api/page/sivujetti_page_entities_page.html#synopsis"
-  },"84": {
+  },"122": {
     "doc": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "title": "Vakiot",
     "content": "STATUS_PUBLISHED ... STATUS_DRAFT ... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/sivujetti_page_entities_page.html#vakiot",
     "relUrl": "/api/page/sivujetti_page_entities_page.html#vakiot"
-  },"85": {
+  },"123": {
     "doc": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "title": "Muuttujat",
     "content": "slug Example: \"/\" or \"/some-page\" path ... level 1 = top level, 2 = 2nd. level etc. title ... meta {description: ?string} layoutId Example \"1\" id Push id, e.g. \"-NGLshqi40f1ZK1ua74k\" type ... blocks ... status self::STATUS_* createdAt Unix timestamp lastUpdatedAt Unix timestamp. If new page, has the same value as createdAt. layout ... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/sivujetti_page_entities_page.html#muuttujat",
     "relUrl": "/api/page/sivujetti_page_entities_page.html#muuttujat"
-  },"86": {
+  },"124": {
     "doc": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "title": "Sivujetti&bsol;Page&bsol;Entities&bsol;Page",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/page/sivujetti_page_entities_page.html",
     "relUrl": "/api/page/sivujetti_page_entities_page.html"
-  },"87": {
+  },"125": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;Entities&bsol;Entry",
     "title": "class Sivujetti\\StoredObjects\\Entities\\Entry",
     "content": "Yksi tietokantaan tallennettu objekti. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_entities_entry.html#class-sivujettistoredobjectsentitiesentry",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_entities_entry.html#class-sivujettistoredobjectsentitiesentry"
-  },"88": {
+  },"126": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;Entities&bsol;Entry",
     "title": "Synopsis",
     "content": "final class Entry extends \\stdClass { // Muuttujat public string $objectName; public array&lt;string, mixed&gt; $data; } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_entities_entry.html#synopsis",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_entities_entry.html#synopsis"
-  },"89": {
+  },"127": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;Entities&bsol;Entry",
     "title": "Muuttujat",
     "content": "objectName esim. \"JetForms:mailSendSettings\" tai \"JetForms:submissions\" data Objektin varsinainen sisältö ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_entities_entry.html#muuttujat",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_entities_entry.html#muuttujat"
-  },"90": {
+  },"128": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;Entities&bsol;Entry",
     "title": "Sivujetti&bsol;StoredObjects&bsol;Entities&bsol;Entry",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_entities_entry.html",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_entities_entry.html"
-  },"91": {
+  },"129": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;StoredObjectsRepository",
     "title": "class Sivujetti\\StoredObjects\\StoredObjectsRepository",
     "content": "Luokka, jolla voi tallentaa tietoa tietokantaan. Samankaltainen kuin Wordpressin Options API. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#class-sivujettistoredobjectsstoredobjectsrepository",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#class-sivujettistoredobjectsstoredobjectsrepository"
-  },"92": {
+  },"130": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;StoredObjectsRepository",
     "title": "Synopsis",
     "content": "final class StoredObjectsRepository { /* Metodit */ public putEntry(string $objectName, array&lt;string, mixed&gt; $data): string|false public find(string $objectName): MySelect public updateEntry(string $objectName, array&lt;string, mixed&gt; $data): MyUpdate } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#synopsis",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#synopsis"
-  },"93": {
+  },"131": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;StoredObjectsRepository",
     "title": "Metodit",
     "content": "putEntry() . Tallentaa objektin tietokantaan, palauttaa id:n. Signature . public function putEntry(string $objectName, array&lt;string, mixed&gt; $data): string|false . Esimerkit . $insertId = $storedObjectsRepo-&gt;putEntry(\"JetForms:submissions\", [ \"sentAt\" =&gt; time(), \"sentFromPage\" =&gt; \"/page\", \"answers\" =&gt; [\"name\" =&gt; \"Submit Te'r\", \"message\" =&gt; \"Hello\"], ]); . find() . Palauttaa query-builderin, joka palauttaa tallennettuja objekteja tietokannasta. Signature . public function find(string $objectName): MySelect . Esimerkit . // Yksi $entry = $storedObjectsRepo-&gt;find(\"JetForms:mailSendSettings\")-&gt;fetch() ?? null; echo $entry instanceof \\Sivujetti\\StoredObjects\\Entities\\Entry ? \"y\" : \"n\"; // Monta $entries = $storedObjectsRepo-&gt;find(\"JetForms:submissions\")-&gt;fetchAll(); // Lisäfilttereillä $entries = $storedObjectsRepo-&gt;find(\"JetForms:submissions\")-&gt;where(\"id &gt; ?\", [\"4\"])-&gt;fetchAll(); . updateEntry() . Palauttaa query-builderin, joka yliajaa objekteja tietokantaan. Signature . public function updateEntry(string $objectName, array&lt;string, mixed&gt; $data): MyUpdate . Esimerkit . $updated = [ \"sendingMethod\" =&gt; $req-&gt;body-&gt;sendingMethod, \"SMTP_host\" =&gt; $req-&gt;body-&gt;SMTP_host ?? null, ... ]; // Kaikki rivit, joilla key \"JetForms:mailSendSettings\" $numAffectedRows = $storedObjectsRepo -&gt;updateEntry(\"JetForms:mailSendSettings\", $updated) -&gt;execute(); // Vain yksi rivi $numAffectedRows = $storedObjectsRepo -&gt;updateEntry(\"JetForms:mailSendSettings\", $updated) -&gt;where(\"id = ?\", [\"2\"], \"AND\") -&gt;execute(); . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#metodit",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html#metodit"
-  },"94": {
+  },"132": {
     "doc": "Sivujetti&bsol;StoredObjects&bsol;StoredObjectsRepository",
     "title": "Sivujetti&bsol;StoredObjects&bsol;StoredObjectsRepository",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html",
     "relUrl": "/api/stored-objects/sivujetti_stored-objects_stored-objects-repository.html"
-  },"95": {
+  },"133": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginAPI",
     "title": "class Sivujetti\\UserPlugin\\UserPluginAPI",
     "content": "Luokka, joka passataan automaattisesti lisäosien pääluokille ${SIVUJETTI_PLUGINS_PATH}MyPrefixMyPlugin/MyPrefixMyPlugin.php (/path/to/backend/plugins/MyPrefixMyPlugin/MyPrefixMyPlugin.php). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#class-sivujettiuserpluginuserpluginapi",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#class-sivujettiuserpluginuserpluginapi"
-  },"96": {
+  },"134": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginAPI",
     "title": "Synopsis",
-    "content": "final class UserPluginAPI extends UserSiteAPI { /* Metodit */ public registerHttpRoute(string $method, string $url, string $ctrlClassPath, string $ctrlMethodName): void public getCurrentLang(): string public enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void public enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void public registerBlockType(string $name, BlockTypeInterface $instance): void public enqueueEditAppJsFile(string $url): void public registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void /* Perityt metodit */ public UserSiteAPI::on(string $when, callable $thenDo): int public UserSiteAPI::isCssFileEnqueued(string $url): bool public UserSiteAPI::isJsFileEnqueued(string $url): bool public UserSiteAPI::registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void public UserSiteAPI::getPlugin(string $name): ?UserPluginInterface } . ",
+    "content": "final class UserPluginAPI extends UserSiteAPI { /* Metodit */ public registerHttpRoute(string $method, string $url, string $ctrlClassPath, string $ctrlMethodName): void public getCurrentLang(): string public enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void public enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void public registerBlockType(string $name, BlockTypeInterface $instance): void public registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void public createService(string $name, array $args = []): mixed /* Perityt metodit */ public UserSiteAPI::on(string $when, callable $thenDo): int public UserSiteAPI::isCssFileEnqueued(string $url): bool public UserSiteAPI::isJsFileEnqueued(string $url): bool public UserSiteAPI::registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void public UserSiteAPI::getPlugin(string $name): ?UserPluginInterface public UserSiteAPI::enqueueEditAppJsFile(string $url): void public UserSiteAPI::enqueuePreviewAppJsFile(string $url): void } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#synopsis",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#synopsis"
-  },"97": {
+  },"135": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginAPI",
     "title": "Metodit",
-    "content": "registerHttpRoute() . … Katso myös : . Signature . public function registerHttpRoute(string $method, string $url, string $ctrlClassPath, string $ctrlMethodName): void . Esimerkit ... final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;registerHttpRoute(\"POST\", \"/plugins/jet-forms/submissions/[w:blockId]/[w:pageSlug]\", SubmissionsController::class, \"handleSubmission\" ); } } . getCurrentLang() . … . Signature . public function getCurrentLang(): string . Esimerkit . echo $api-&gt;getCurrentLang(); // \"fi\" . enqueueCssFile() . Sama kuin UserSiteAPI::enqueueCssFile(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (plugin-my-prefix-my-plugin) alkavat urlit. Signature . public function enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit . final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function (Page $page) use ($api) { if (!BlockTree::findBlock($page-&gt;blocks, fn($b) =&gt; $b-&gt;type === ContactFormBlockType::NAME || $b-&gt;type === SubscriptionFormBlockType::NAME)) return; if (!$api-&gt;isCssFileEnqueued(\"sivujetti/vendor/pristine.css\")) $api-&gt;enqueueCssFile(\"sivujetti/vendor/pristine.css\"); if (!$api-&gt;isCssFileEnqueued(\"plugin-jet-forms-foo.css\")) $api-&gt;enqueueCssFile(\"plugin-jet-forms-foo.css\"); ... }); } } . enqueueJsFile() . Sama kuin UserSiteAPI::enqueueJsFile(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (plugin-my-prefix-my-plugin) alkavat urlit. Signature . public function enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit . final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function (Page $page) use ($api) { if (!BlockTree::findBlock($page-&gt;blocks, fn($b) =&gt; $b-&gt;type === ContactFormBlockType::NAME || $b-&gt;type === SubscriptionFormBlockType::NAME)) return; if (!$api-&gt;isJsFileEnqueued(\"sivujetti/vendor/pristine.min.js\")) $api-&gt;enqueueJsFile(\"sivujetti/vendor/pristine.min.js\"); if (!$api-&gt;isJsFileEnqueued(\"plugin-jet-forms-bundle.js\")) $api-&gt;enqueueJsFile(\"plugin-jet-forms-bundle.js\"); ... }); } } . registerBlockType() . Sama kuin UserSiteAPI::registerBlockType(), mutta hyväksyy vain tämän lisäosan nimiavaruudella (PluginMyPrefixMyPlugin) alkavat nimet. Signature . public function registerBlockType(string $name, BlockTypeInterface $instance): void . Esimerkit . class ContactFormBlockType implements BlockTypeInterface { public const NAME = \"JetFormsContactForm\"; public function defineProperties(PropertiesBuilder $builder): \\ArrayObject { return $builder -&gt;newProperty(\"property\", $builder::DATA_TYPE_TEXT) -&gt;getResult(); } } final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { $api-&gt;on($api::ON_ROUTE_CONTROLLER_BEFORE_EXEC, function () use ($api) { $api-&gt;registerBlockType(ContactFormBlockType::NAME, new ContactFormBlockType); }); ... } } . enqueueEditAppJsFile() . Sama kuin UserSiteAPI::enqueueEditAppJsFile(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (plugin-my-prefix-my-plugin) alkavat urlit. Signature . public function enqueueEditAppJsFile(string $url): void . Esimerkit . final class JetForms implements UserPluginInterface { public function __construct(UserPluginAPI $api) { $api-&gt;on($api::ON_ROUTE_CONTROLLER_BEFORE_EXEC, function () use ($api) { ... $api-&gt;enqueueEditAppJsFile(\"plugin-jet-forms-edit-app-bundle.js\"); }); } } . registerBlockRenderer() . Sama kuin UserSiteAPI::registerBlockRenderer(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (my-prefix-my-plugin) alkavat fileId:t. Signature . public function registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void . Esimerkit ... ",
+    "content": "registerHttpRoute() . … Katso myös : . Signature . public function registerHttpRoute(string $method, string $url, string $ctrlClassPath, string $ctrlMethodName): void . Esimerkit ... final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;registerHttpRoute(\"POST\", \"/plugins/jet-forms/submissions/[w:blockId]/[w:pageSlug]\", SubmissionsController::class, \"handleSubmission\" ); } } . getCurrentLang() . … . Signature . public function getCurrentLang(): string . Esimerkit . echo $api-&gt;getCurrentLang(); // \"fi\" . enqueueCssFile() . Sama kuin UserSiteAPI::enqueueCssFile(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (plugin-my-prefix-my-plugin) alkavat urlit. Signature . public function enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit . final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function (Page $page) use ($api) { if (!BlockTree::findBlock($page-&gt;blocks, fn($b) =&gt; $b-&gt;type === ContactFormBlockType::NAME || $b-&gt;type === SubscriptionFormBlockType::NAME)) return; if (!$api-&gt;isCssFileEnqueued(\"sivujetti/vendor/pristine.css\")) $api-&gt;enqueueCssFile(\"sivujetti/vendor/pristine.css\"); if (!$api-&gt;isCssFileEnqueued(\"plugin-jet-forms-foo.css\")) $api-&gt;enqueueCssFile(\"plugin-jet-forms-foo.css\"); ... }); } } . enqueueJsFile() . Sama kuin UserSiteAPI::enqueueJsFile(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (plugin-my-prefix-my-plugin) alkavat urlit. Signature . public function enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit . final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { ... $api-&gt;on($api::ON_PAGE_BEFORE_RENDER, function (Page $page) use ($api) { if (!BlockTree::findBlock($page-&gt;blocks, fn($b) =&gt; $b-&gt;type === ContactFormBlockType::NAME || $b-&gt;type === SubscriptionFormBlockType::NAME)) return; if (!$api-&gt;isJsFileEnqueued(\"sivujetti/vendor/pristine.min.js\")) $api-&gt;enqueueJsFile(\"sivujetti/vendor/pristine.min.js\"); if (!$api-&gt;isJsFileEnqueued(\"plugin-jet-forms-bundle.js\")) $api-&gt;enqueueJsFile(\"plugin-jet-forms-bundle.js\"); ... }); } } . registerBlockType() . Sama kuin UserSiteAPI::registerBlockType(), mutta hyväksyy vain tämän lisäosan nimiavaruudella (PluginMyPrefixMyPlugin) alkavat nimet. Signature . public function registerBlockType(string $name, BlockTypeInterface $instance): void . Esimerkit . class ContactFormBlockType implements BlockTypeInterface { public const NAME = \"JetFormsContactForm\"; public function defineProperties(PropertiesBuilder $builder): \\ArrayObject { return $builder -&gt;newProperty(\"property\", $builder::DATA_TYPE_TEXT) -&gt;getResult(); } } final class JetForms implements UserPluginInterface { ... public function __construct(UserPluginAPI $api) { $api-&gt;on($api::ON_ROUTE_CONTROLLER_BEFORE_EXEC, function () use ($api) { $api-&gt;registerBlockType(ContactFormBlockType::NAME, new ContactFormBlockType); }); ... } } . createService() . … . Signature . public function createService(string $name, array $args = []): mixed . Esimerkit ... registerBlockRenderer() . Sama kuin UserSiteAPI::registerBlockRenderer(), mutta hyväksyy vain tämän lisäosan slugifioidulla nimiavaruudella (my-prefix-my-plugin) alkavat fileId:t. Signature . public function registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void . Esimerkit ... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#metodit",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html#metodit"
-  },"98": {
+  },"136": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginAPI",
     "title": "Sivujetti&bsol;UserPlugin&bsol;UserPluginAPI",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-api.html"
-  },"99": {
+  },"137": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginInterface",
     "title": "interface Sivujetti\\UserPlugin\\UserPluginInterface",
     "content": "Rajapinta lisäosien pääluokille (${SIVUJETTI_PLUGINS_PATH}MyPrefixMyPlugin/MyPrefixMyPlugin.php). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html#interface-sivujettiuserpluginuserplugininterface",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html#interface-sivujettiuserpluginuserplugininterface"
-  },"100": {
+  },"138": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginInterface",
     "title": "Synopsis",
     "content": "interface UserPluginInterface { /* Metodit */ public __construct(UserPluginAPI $api) } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html#synopsis",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html#synopsis"
-  },"101": {
+  },"139": {
     "doc": "Sivujetti&bsol;UserPlugin&bsol;UserPluginInterface",
     "title": "Sivujetti&bsol;UserPlugin&bsol;UserPluginInterface",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html",
     "relUrl": "/api/user-plugin/sivujetti_user-plugin_user-plugin-interface.html"
-  },"102": {
+  },"140": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "title": "class Sivujetti\\UserSite\\UserSiteAPI",
     "content": "Luokka, joka passataan automaattisesti sivuston pääluokalle ${SIVUJETTI_SITE_PATH}Site.php (/path/to/backend/site/Site.php). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-api.html#class-sivujettiusersiteusersiteapi",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-api.html#class-sivujettiusersiteusersiteapi"
-  },"103": {
+  },"141": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "title": "Synopsis",
-    "content": "class UserSiteAPI { /* Vakiot */ const ON_ROUTE_CONTROLLER_BEFORE_EXEC = \"sivujetti:beforeExecRouteController\"; const ON_PAGE_BEFORE_RENDER = \"sivujetti:onPageBeforeRender\"; /* Metodit */ public on(string $when, callable $thenDo): int public enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void public enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void public isCssFileEnqueued(string $url): bool public isJsFileEnqueued(string $url): bool public registerBlockType(string $name, BlockTypeInterface $instance): void public enqueueEditAppJsFile(string $url): void public registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void public getPlugin(string $name): ?UserPluginInterface } . ",
+    "content": "class UserSiteAPI { /* Vakiot */ const ON_ROUTE_CONTROLLER_BEFORE_EXEC = \"sivujetti:beforeExecRouteController\"; const ON_PAGE_BEFORE_RENDER = \"sivujetti:onPageBeforeRender\"; /* Metodit */ public on(string $when, callable $thenDo): int public enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void public enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void public isCssFileEnqueued(string $url): bool public isJsFileEnqueued(string $url): bool public registerBlockType(string $name, BlockTypeInterface $instance): void public enqueueEditAppJsFile(string $url): void public enqueuePreviewAppJsFile(string $url): void public registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void public getPlugin(string $name): ?UserPluginInterface } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-api.html#synopsis",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-api.html#synopsis"
-  },"104": {
+  },"142": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "title": "Vakiot",
     "content": "ON_ROUTE_CONTROLLER_BEFORE_EXEC Signaali, joka ajetaan juuri ennen kontrolleria ON_PAGE_BEFORE_RENDER Signaali, joka ajetaan juuri ennen sivun renderöimistä ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-api.html#vakiot",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-api.html#vakiot"
-  },"105": {
+  },"143": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "title": "Metodit",
-    "content": "on() . … . Signature . public function on(string $when, callable $thenDo): int . Esimerkit ... enqueueCssFile() . … . Signature . public function enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit ... enqueueJsFile() . … . Signature . public function enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit ... isCssFileEnqueued() . … . Signature . public function isCssFileEnqueued(string $url): bool . Esimerkit ... isJsFileEnqueued() . … . Signature . public function isJsFileEnqueued(string $url): bool . Esimerkit ... registerBlockType() . … . Signature . public function registerBlockType(string $name, BlockTypeInterface $instance): void . Esimerkit ... enqueueEditAppJsFile() . Lisää tiedoston sisällytettäväksi sivuun kirjautuneelle muokkaustilassa. $url tulee sijaita ${SIVUJETTI_SITE_PATH}public/ -kansiossa. Signature . public function enqueueEditAppJsFile(string $url): void . Esimerkit ... registerBlockRenderer() . Rekisteröi tiedosto, jolla voi renderöidä lohkon. Signature . public function registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void . Esimerkit ... getPlugin() . … . Signature . public function getPlugin(string $name): ?UserPluginInterface . Esimerkit ... ",
+    "content": "on() . … . Signature . public function on(string $when, callable $thenDo): int . Esimerkit ... enqueueCssFile() . … . Signature . public function enqueueCssFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit ... enqueueJsFile() . … . Signature . public function enqueueJsFile(string $url, array&lt;string, string&gt; $attrs = []): void . Esimerkit ... isCssFileEnqueued() . … . Signature . public function isCssFileEnqueued(string $url): bool . Esimerkit ... isJsFileEnqueued() . … . Signature . public function isJsFileEnqueued(string $url): bool . Esimerkit ... registerBlockType() . … . Signature . public function registerBlockType(string $name, BlockTypeInterface $instance): void . Esimerkit ... enqueueEditAppJsFile() . Lisää tiedoston sisällytettäväksi sivuun kirjautuneelle muokkaustilassa. $url tulee sijaita ${SIVUJETTI_SITE_PATH}public/ -kansiossa. Signature . public function enqueueEditAppJsFile(string $url): void . Esimerkit ... enqueuePreviewAppJsFile() . Lisää tiedoston sisällytettäväksi esikatselu-iframeen. Signature . public function enqueuePreviewAppJsFile(string $url): void . Esimerkit ... registerBlockRenderer() . Rekisteröi tiedosto, jolla voi renderöidä lohkon. Signature . public function registerBlockRenderer(string $fileId, ?string $friendlyName = null, ?string $for = null): void . Esimerkit ... getPlugin() . … . Signature . public function getPlugin(string $name): ?UserPluginInterface . Esimerkit ... ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-api.html#metodit",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-api.html#metodit"
-  },"106": {
+  },"144": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "title": "Sivujetti&bsol;UserSite&bsol;UserSiteAPI",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-api.html",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-api.html"
-  },"107": {
+  },"145": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteInterface",
     "title": "interface Sivujetti\\UserSite\\UserSiteInterface",
     "content": "Rajapinta sivustojen pääluokille (${SIVUJETTI_SITE_PATH}Site.php). ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-interface.html#interface-sivujettiusersiteusersiteinterface",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-interface.html#interface-sivujettiusersiteusersiteinterface"
-  },"108": {
+  },"146": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteInterface",
     "title": "Synopsis",
     "content": "interface UserSiteInterface { /* Metodit */ public __construct(UserSiteAPI $api) } . ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-interface.html#synopsis",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-interface.html#synopsis"
-  },"109": {
+  },"147": {
     "doc": "Sivujetti&bsol;UserSite&bsol;UserSiteInterface",
     "title": "Sivujetti&bsol;UserSite&bsol;UserSiteInterface",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/sivujetti_user-site_user-site-interface.html",
     "relUrl": "/api/user-site/sivujetti_user-site_user-site-interface.html"
-  },"110": {
+  },"148": {
     "doc": "Sivujetti&bsol;StoredObjects",
     "title": "namespace Sivujetti\\StoredObjects",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/stored-objects.html#namespace-sivujettistoredobjects",
     "relUrl": "/api/stored-objects/stored-objects.html#namespace-sivujettistoredobjects"
-  },"111": {
+  },"149": {
     "doc": "Sivujetti&bsol;StoredObjects",
     "title": "Sivujetti&bsol;StoredObjects",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/stored-objects/stored-objects.html",
     "relUrl": "/api/stored-objects/stored-objects.html"
-  },"112": {
+  },"150": {
     "doc": "Tutoriaalit",
     "title": "Tutoriaalit",
     "content": "Step-by-step -oppaita, joilla pääset mahdollisimman nopeasti alkuun. ",
     "url": "https://sivujetti.github.io/dev-docs/fi/tutorials/tutorials.html",
     "relUrl": "/tutorials/tutorials.html"
-  },"113": {
+  },"151": {
     "doc": "Sivujetti&bsol;UserPlugin",
     "title": "namespace Sivujetti\\UserPlugin",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/user-plugin.html#namespace-sivujettiuserplugin",
     "relUrl": "/api/user-plugin/user-plugin.html#namespace-sivujettiuserplugin"
-  },"114": {
+  },"152": {
     "doc": "Sivujetti&bsol;UserPlugin",
     "title": "Sivujetti&bsol;UserPlugin",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-plugin/user-plugin.html",
     "relUrl": "/api/user-plugin/user-plugin.html"
-  },"115": {
+  },"153": {
     "doc": "Sivujetti&bsol;UserSite",
     "title": "namespace Sivujetti\\UserSite",
     "content": " ",
     "url": "https://sivujetti.github.io/dev-docs/fi/api/user-site/user-site.html#namespace-sivujettiusersite",
     "relUrl": "/api/user-site/user-site.html#namespace-sivujettiusersite"
-  },"116": {
+  },"154": {
     "doc": "Sivujetti&bsol;UserSite",
     "title": "Sivujetti&bsol;UserSite",
     "content": " ",
